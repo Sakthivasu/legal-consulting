@@ -1,0 +1,1578 @@
+
+/* =========================================================
+   LEXORA LEGAL & ADVISORY
+   CONSULTING PAGE - COMPLETE CSS
+   Homepage Design Reference
+   ========================================================= */
+
+/* =========================================================
+   01. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+  --consulting-navy: #203858;
+  --consulting-dark: #172B46;
+  --consulting-deep: #14263D;
+  --consulting-gold: #C5A46D;
+  --consulting-gold-light: #D9BD8C;
+
+  --consulting-white: #FFFFFF;
+  --consulting-offwhite: #F8F8F6;
+  --consulting-light: #F1F3F5;
+
+  --consulting-text: #273449;
+  --consulting-muted: #6F7B8A;
+  --consulting-border: #E4E8ED;
+
+  --consulting-heading-font: "Plus Jakarta Sans", sans-serif;
+  --consulting-body-font: "Inter", sans-serif;
+
+  --consulting-container: 1200px;
+
+  --consulting-transition: 0.3s ease;
+}
+
+/* =========================================================
+   02. CONSULTING PAGE BASE
+   ========================================================= */
+
+body.consulting-page {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-family: var(--consulting-body-font);
+  color: var(--consulting-text);
+  background: var(--consulting-white);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.consulting-page *,
+.consulting-page *::before,
+.consulting-page *::after {
+  box-sizing: border-box;
+}
+
+.consulting-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.consulting-page a {
+  text-decoration: none;
+}
+
+.consulting-page button {
+  font-family: inherit;
+}
+
+.consulting-page h1,
+.consulting-page h2,
+.consulting-page h3 {
+  font-family: var(--consulting-heading-font);
+  color: var(--consulting-dark);
+  line-height: 1.2;
+}
+
+.consulting-page p {
+  line-height: 1.8;
+}
+
+.consulting-page .container {
+  width: min(100% - 48px, var(--consulting-container));
+  margin-inline: auto;
+}
+
+.consulting-page .section-padding {
+  padding: 100px 0;
+}
+
+/* =========================================================
+   03. PRELOADER - NAVY & GOLD
+   ========================================================= */
+
+.consulting-page .logo-symbol {
+  display: grid;
+  place-items: center;
+
+  width: 54px;
+  height: 54px;
+
+  border: 1px solid var(--consulting-gold);
+  border-radius: 50%;
+
+  color: var(--consulting-gold);
+  font-family: var(--consulting-heading-font);
+  font-size: 29px;
+  font-weight: 700;
+
+  box-shadow: 0 0 25px rgba(197, 164, 109, 0.15);
+}
+
+.consulting-page .logo-name {
+  color: var(--consulting-white);
+  font-family: var(--consulting-heading-font);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.consulting-page .orbit-one {
+  animation: consultingOrbit 8s linear infinite;
+}
+
+.consulting-page .orbit-two {
+  inset: 15px;
+
+  border-style: dashed;
+  border-color: rgba(217, 189, 140, 0.5);
+
+  animation: consultingOrbitReverse 12s linear infinite;
+}
+
+@keyframes consultingOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes consultingOrbitReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* =========================================================
+   04. HEADER
+   ========================================================= */
+
+/* Brand */
+
+/* Desktop navigation */
+
+/* Header actions */
+
+/* =========================================================
+   05. BUTTONS
+   ========================================================= */
+
+.consulting-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 48px;
+  padding: 13px 23px;
+
+  border: 1px solid transparent;
+  border-radius: 3px;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  cursor: pointer;
+
+  transition:
+    color var(--consulting-transition),
+    background var(--consulting-transition),
+    border-color var(--consulting-transition),
+    transform var(--consulting-transition),
+    box-shadow var(--consulting-transition);
+}
+
+.consulting-page .btn i {
+  width: 16px;
+  height: 16px;
+}
+
+.consulting-page .btn-primary {
+  background: var(--consulting-navy);
+  color: var(--consulting-white);
+  border-color: var(--consulting-navy);
+}
+
+.consulting-page .btn-primary:hover {
+  background: var(--consulting-dark);
+  border-color: var(--consulting-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(32, 56, 88, 0.17);
+}
+
+.consulting-page .btn-outline {
+  background: transparent;
+  color: var(--consulting-navy);
+  border-color: rgba(32, 56, 88, 0.3);
+}
+
+.consulting-page .btn-outline:hover {
+  background: var(--consulting-navy);
+  color: var(--consulting-white);
+  border-color: var(--consulting-navy);
+}
+
+.consulting-page .btn-light {
+  background: var(--consulting-white);
+  color: var(--consulting-navy);
+}
+
+.consulting-page .btn-light:hover {
+  background: var(--consulting-gold-light);
+  color: var(--consulting-dark);
+}
+
+.consulting-page .btn-cta-outline {
+  color: var(--consulting-white);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.consulting-page .btn-cta-outline:hover {
+  background: var(--consulting-white);
+  color: var(--consulting-navy);
+}
+
+.consulting-page .btn-large {
+  min-height: 55px;
+  padding: 16px 25px;
+}
+
+/* =========================================================
+   06. MOBILE NAVIGATION
+   ========================================================= */
+
+.consulting-page.menu-open {
+  overflow: hidden;
+}
+
+/* =========================================================
+   07. EYEBROW
+   ========================================================= */
+
+.consulting-page .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--consulting-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  line-height: 1.6;
+}
+
+.consulting-page .eyebrow-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: var(--consulting-gold);
+  box-shadow: 0 0 0 4px rgba(197, 164, 109, 0.12);
+}
+
+/* =========================================================
+   08. HERO SECTION
+   ========================================================= */
+
+.consulting-page .consulting-hero {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      120deg,
+      #F8F8F6 0%,
+      #FFFFFF 55%,
+      #F5F6F7 100%
+    );
+}
+
+.consulting-page .page-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.consulting-page .page-hero-content {
+  padding: 20px 0;
+}
+
+.consulting-page .page-hero-content h1 {
+  margin: 24px 0;
+
+  max-width: 650px;
+
+  font-size: clamp(40px, 5vw, 63px);
+  font-weight: 800;
+  letter-spacing: -2.5px;
+}
+
+.consulting-page .page-hero-content h1 span {
+  display: block;
+  color: var(--consulting-gold);
+}
+
+.consulting-page .page-hero-content > p {
+  max-width: 540px;
+  margin-bottom: 30px;
+
+  color: var(--consulting-muted);
+  font-size: 15px;
+}
+
+.consulting-page .page-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.consulting-page .page-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 35px;
+
+  color: var(--consulting-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.consulting-page .page-hero-note i {
+  width: 17px;
+  height: 17px;
+  color: var(--consulting-gold);
+}
+
+.consulting-page .page-hero-visual {
+  position: relative;
+
+  min-height: 520px;
+  overflow: hidden;
+
+  border-radius: 4px;
+  background: var(--consulting-light);
+}
+
+.consulting-page .page-hero-visual img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.consulting-page .page-hero-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(17, 37, 62, 0.88),
+    transparent 65%
+  );
+}
+
+.consulting-page .page-hero-image-label {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.consulting-page .page-hero-image-label span {
+  color: var(--consulting-gold-light);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.consulting-page .page-hero-image-label strong {
+  color: var(--consulting-white);
+  font-family: var(--consulting-heading-font);
+  font-size: 22px;
+}
+
+/* =========================================================
+   09. INTRODUCTION SECTION
+   ========================================================= */
+
+.consulting-page .services-introduction {
+  background: var(--consulting-white);
+}
+
+.consulting-page .services-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.consulting-page .services-intro-heading h2 {
+  max-width: 570px;
+  margin: 20px 0 0;
+
+  font-size: clamp(31px, 3.5vw, 43px);
+  letter-spacing: -1.5px;
+}
+
+.consulting-page .services-intro-heading h2 span {
+  color: var(--consulting-gold);
+}
+
+.consulting-page .services-intro-description p {
+  margin: 0 0 18px;
+
+  color: var(--consulting-muted);
+  font-size: 13px;
+}
+
+.consulting-page .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 10px;
+
+  color: var(--consulting-navy);
+  font-size: 12px;
+  font-weight: 800;
+
+  transition: color var(--consulting-transition);
+}
+
+.consulting-page .text-link i {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--consulting-transition);
+}
+
+.consulting-page .text-link:hover {
+  color: var(--consulting-gold);
+}
+
+.consulting-page .text-link:hover i {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   10. SECTION HEADINGS
+   ========================================================= */
+
+.consulting-page .section-heading {
+  max-width: 720px;
+  margin-bottom: 55px;
+}
+
+.consulting-page .centered-heading {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.consulting-page .section-heading h2 {
+  margin: 18px 0;
+
+  font-size: clamp(30px, 3.5vw, 43px);
+  letter-spacing: -1.5px;
+}
+
+.consulting-page .section-heading h2 span {
+  color: var(--consulting-gold);
+}
+
+.consulting-page .section-heading > p {
+  max-width: 620px;
+  margin: 0 auto;
+
+  color: var(--consulting-muted);
+  font-size: 13px;
+}
+
+/* =========================================================
+   11. CONSULTING SERVICE CARDS
+   ========================================================= */
+
+.consulting-page .legal-services-section {
+  background: var(--consulting-offwhite);
+}
+
+.consulting-page .legal-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.consulting-page .legal-service-card {
+  padding: 34px;
+
+  border: 1px solid var(--consulting-border);
+  background: var(--consulting-white);
+
+  transition:
+    transform var(--consulting-transition),
+    border-color var(--consulting-transition),
+    box-shadow var(--consulting-transition);
+}
+
+.consulting-page .legal-service-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(197, 164, 109, 0.6);
+  box-shadow: 0 18px 40px rgba(23, 43, 70, 0.08);
+}
+
+.consulting-page .legal-service-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.consulting-page .service-number {
+  color: var(--consulting-gold);
+  font-family: var(--consulting-heading-font);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.consulting-page .legal-service-icon {
+  display: grid;
+  place-items: center;
+
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid rgba(197, 164, 109, 0.45);
+  background: #FAF8F3;
+  color: var(--consulting-navy);
+}
+
+.consulting-page .legal-service-icon i {
+  width: 25px;
+  height: 25px;
+}
+
+.consulting-page .service-category {
+  color: var(--consulting-gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.consulting-page .legal-service-content h3 {
+  margin: 13px 0;
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.consulting-page .legal-service-content > p {
+  min-height: 75px;
+  margin-bottom: 22px;
+
+  color: var(--consulting-muted);
+  font-size: 12px;
+}
+
+.consulting-page .service-feature-list {
+  display: grid;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0 0 22px;
+
+  list-style: none;
+  border-bottom: 1px solid var(--consulting-border);
+}
+
+.consulting-page .service-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--consulting-text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.consulting-page .service-feature-list i {
+  width: 16px;
+  height: 16px;
+
+  color: var(--consulting-gold);
+}
+
+.consulting-page .legal-service-content > .text-link {
+  margin-top: 23px;
+}
+
+/* =========================================================
+   12. STRATEGY / ABOUT PREVIEW
+   ========================================================= */
+
+.consulting-page .home-about-preview {
+  background: var(--consulting-white);
+}
+
+.consulting-page .about-preview-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  align-items: center;
+  gap: 85px;
+}
+
+.consulting-page .about-preview-image {
+  position: relative;
+  min-height: 490px;
+}
+
+.consulting-page .about-preview-image > img {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+}
+
+.consulting-page .about-image-label {
+  position: absolute;
+  right: -25px;
+  bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  max-width: 300px;
+  padding: 20px;
+
+  background: var(--consulting-navy);
+  color: var(--consulting-white);
+}
+
+.consulting-page .about-image-label-number {
+  color: var(--consulting-gold-light);
+  font-family: var(--consulting-heading-font);
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.consulting-page .about-image-label span:last-child {
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.consulting-page .about-preview-content h2 {
+  margin: 20px 0;
+
+  font-size: clamp(30px, 3.5vw, 42px);
+  letter-spacing: -1.5px;
+}
+
+.consulting-page .about-preview-content h2 span {
+  color: var(--consulting-gold);
+}
+
+.consulting-page .about-preview-content > p {
+  margin-bottom: 15px;
+
+  color: var(--consulting-muted);
+  font-size: 13px;
+}
+
+.consulting-page .about-preview-points {
+  display: grid;
+  gap: 15px;
+
+  margin: 27px 0 30px;
+}
+
+.consulting-page .about-preview-points div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--consulting-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.consulting-page .about-preview-points i {
+  width: 19px;
+  height: 19px;
+  color: var(--consulting-gold);
+}
+
+/* =========================================================
+   13. CONSULTING FRAMEWORK
+   ========================================================= */
+
+.consulting-page .services-framework {
+  background: var(--consulting-offwhite);
+}
+
+.consulting-page .framework-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 50px;
+
+  margin-bottom: 50px;
+}
+
+.consulting-page .framework-heading h2 {
+  margin: 18px 0 0;
+
+  font-size: clamp(30px, 3.5vw, 42px);
+  letter-spacing: -1.5px;
+}
+
+.consulting-page .framework-heading h2 span {
+  color: var(--consulting-gold);
+}
+
+.consulting-page .framework-heading > p {
+  max-width: 380px;
+  margin: 0;
+
+  color: var(--consulting-muted);
+  font-size: 13px;
+}
+
+.consulting-page .framework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.consulting-page .framework-card {
+  position: relative;
+
+  min-height: 280px;
+  padding: 35px;
+
+  border: 1px solid var(--consulting-border);
+  background: var(--consulting-white);
+
+  transition:
+    transform var(--consulting-transition),
+    box-shadow var(--consulting-transition);
+}
+
+.consulting-page .framework-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(23, 43, 70, 0.08);
+}
+
+.consulting-page .framework-number {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+
+  color: rgba(197, 164, 109, 0.45);
+  font-family: var(--consulting-heading-font);
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.consulting-page .framework-icon {
+  display: grid;
+  place-items: center;
+
+  width: 56px;
+  height: 56px;
+  margin-bottom: 27px;
+
+  background: #F7F4ED;
+  color: var(--consulting-gold);
+}
+
+.consulting-page .framework-icon i {
+  width: 25px;
+  height: 25px;
+}
+
+.consulting-page .framework-card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.consulting-page .framework-card p {
+  margin: 0;
+
+  color: var(--consulting-muted);
+  font-size: 12px;
+}
+
+/* =========================================================
+   14. BUSINESS PRIORITIES
+   ========================================================= */
+
+.consulting-page .home-stats {
+  background: var(--consulting-white);
+}
+
+.consulting-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.consulting-page .stat-card {
+  padding: 30px 24px;
+
+  border: 1px solid var(--consulting-border);
+  background: var(--consulting-white);
+
+  transition:
+    transform var(--consulting-transition),
+    border-color var(--consulting-transition);
+}
+
+.consulting-page .stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--consulting-gold);
+}
+
+.consulting-page .stat-card > i {
+  width: 27px;
+  height: 27px;
+  margin-bottom: 25px;
+
+  color: var(--consulting-gold);
+}
+
+.consulting-page .stat-card strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--consulting-navy);
+  font-family: var(--consulting-heading-font);
+  font-size: 29px;
+  font-weight: 800;
+}
+
+.consulting-page .stat-card > span {
+  display: block;
+  margin-bottom: 12px;
+
+  color: var(--consulting-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.consulting-page .stat-card p {
+  margin: 0;
+
+  color: var(--consulting-muted);
+  font-size: 11px;
+}
+
+/* =========================================================
+   15. CONNECTED ADVISORY
+   ========================================================= */
+
+.consulting-page .additional-legal-support {
+  background: var(--consulting-offwhite);
+}
+
+.consulting-page .additional-support-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.consulting-page .additional-support-content h2 {
+  margin: 20px 0;
+
+  font-size: clamp(30px, 3.5vw, 42px);
+  letter-spacing: -1.5px;
+}
+
+.consulting-page .additional-support-content h2 span {
+  color: var(--consulting-gold);
+}
+
+.consulting-page .additional-support-content > p {
+  margin-bottom: 30px;
+
+  color: var(--consulting-muted);
+  font-size: 13px;
+}
+
+.consulting-page .additional-support-list {
+  border-top: 1px solid var(--consulting-border);
+}
+
+.consulting-page .additional-support-item {
+  display: grid;
+  grid-template-columns: 52px 1fr 20px;
+  align-items: center;
+  gap: 18px;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid var(--consulting-border);
+}
+
+.consulting-page .additional-support-item-icon {
+  display: grid;
+  place-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  background: var(--consulting-white);
+  color: var(--consulting-gold);
+}
+
+.consulting-page .additional-support-item-icon i {
+  width: 23px;
+  height: 23px;
+}
+
+.consulting-page .additional-support-item h3 {
+  margin: 0 0 7px;
+  font-size: 14px;
+}
+
+.consulting-page .additional-support-item p {
+  margin: 0;
+
+  color: var(--consulting-muted);
+  font-size: 11px;
+}
+
+.consulting-page .support-arrow {
+  width: 17px;
+  height: 17px;
+
+  color: var(--consulting-gold);
+
+  transition: transform var(--consulting-transition);
+}
+
+.consulting-page .additional-support-item:hover .support-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   16. FINAL CTA
+   ========================================================= */
+
+.consulting-page .services-cta {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(197, 164, 109, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      120deg,
+      #172B46,
+      #203858
+    );
+}
+
+.consulting-page .services-cta .container {
+  position: relative;
+  z-index: 2;
+}
+
+.consulting-page .cta-content {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.consulting-page .cta-content h2 {
+  margin: 22px 0;
+
+  color: var(--consulting-white);
+  font-size: clamp(32px, 4.5vw, 49px);
+  letter-spacing: -1.8px;
+}
+
+.consulting-page .cta-content h2 span {
+  display: block;
+  color: var(--consulting-gold-light);
+}
+
+.consulting-page .cta-content > p {
+  max-width: 570px;
+  margin: 0 auto 30px;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+}
+
+.consulting-page .cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.consulting-page .cta-decoration {
+  position: absolute;
+  right: 6%;
+  bottom: -55px;
+
+  color: rgba(197, 164, 109, 0.10);
+  pointer-events: none;
+}
+
+.consulting-page .cta-decoration i {
+  width: 230px;
+  height: 230px;
+  stroke-width: 0.7;
+}
+
+/* =========================================================
+   17. FOOTER - NAVY & GOLD
+   ========================================================= */
+
+.consulting-page .site-footer {
+  padding-top: 75px;
+
+  background: var(--consulting-deep);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.consulting-page .footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr 1.1fr;
+  gap: 45px;
+
+  padding-bottom: 60px;
+}
+
+.consulting-page .footer-logo {
+  margin-bottom: 23px;
+}
+
+.consulting-page .footer-logo .brand-symbol {
+  color: var(--consulting-gold-light);
+  border-color: var(--consulting-gold);
+}
+
+.consulting-page .footer-logo .brand-details strong {
+  color: var(--consulting-white);
+}
+
+.consulting-page .footer-logo .brand-details small {
+  color: var(--consulting-gold-light);
+}
+
+.consulting-page .footer-brand > p {
+  max-width: 290px;
+  margin-bottom: 25px;
+
+  color: rgba(255, 255, 255, 0.63);
+  font-size: 12px;
+}
+
+.consulting-page .footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.consulting-page .footer-socials a {
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--consulting-gold-light);
+
+  transition:
+    background var(--consulting-transition),
+    color var(--consulting-transition),
+    border-color var(--consulting-transition);
+}
+
+.consulting-page .footer-socials a:hover {
+  background: var(--consulting-gold);
+  border-color: var(--consulting-gold);
+  color: var(--consulting-deep);
+}
+
+.consulting-page .footer-socials i {
+  width: 16px;
+  height: 16px;
+}
+
+.consulting-page .footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.consulting-page .footer-column h3 {
+  margin: 0 0 9px;
+
+  color: var(--consulting-white);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.consulting-page .footer-column > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+
+  transition:
+    color var(--consulting-transition),
+    transform var(--consulting-transition);
+}
+
+.consulting-page .footer-column > a:hover {
+  color: var(--consulting-gold-light);
+  transform: translateX(4px);
+}
+
+.consulting-page .footer-contact > a {
+  align-items: flex-start;
+  line-height: 1.6;
+}
+
+.consulting-page .footer-contact i {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+
+  color: var(--consulting-gold);
+}
+
+.consulting-page .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  min-height: 75px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.consulting-page .footer-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+}
+
+.consulting-page .footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.consulting-page .footer-legal-links a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+
+  transition: color var(--consulting-transition);
+}
+
+.consulting-page .footer-legal-links a:hover {
+  color: var(--consulting-gold-light);
+}
+
+/* =========================================================
+   18. BACK TO TOP
+   ========================================================= */
+
+.consulting-page .back-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 900;
+
+  display: grid;
+  place-items: center;
+
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid var(--consulting-gold);
+  border-radius: 3px;
+
+  background: var(--consulting-navy);
+  color: var(--consulting-white);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+
+  cursor: pointer;
+
+  transition:
+    opacity var(--consulting-transition),
+    visibility var(--consulting-transition),
+    transform var(--consulting-transition),
+    background var(--consulting-transition);
+}
+
+.consulting-page .back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.consulting-page .back-to-top:hover {
+  background: var(--consulting-gold);
+  color: var(--consulting-dark);
+}
+
+.consulting-page .back-to-top i {
+  width: 20px;
+  height: 20px;
+}
+
+/* =========================================================
+   19. REVEAL ANIMATIONS
+   ========================================================= */
+
+.consulting-page .reveal {
+  opacity: 0;
+  transform: translateY(25px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.consulting-page .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   20. ACCESSIBILITY
+   ========================================================= */
+
+.consulting-page a:focus-visible,
+.consulting-page button:focus-visible {
+  outline: 3px solid var(--consulting-gold);
+  outline-offset: 4px;
+}
+
+.consulting-page img.image-error {
+  background: var(--consulting-light);
+}
+
+/* =========================================================
+   21. RESPONSIVE - 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  
+
+  
+
+  
+
+  .consulting-page .page-hero-grid {
+    gap: 40px;
+  }
+
+  .consulting-page .page-hero-visual {
+    min-height: 460px;
+  }
+
+  .consulting-page .footer-main {
+    gap: 30px;
+  }
+
+}
+
+/* =========================================================
+   22. RESPONSIVE - 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  
+
+  
+
+  
+
+  .consulting-page .page-hero-grid {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 28px;
+  }
+
+  .consulting-page .page-hero-content h1 {
+    font-size: 43px;
+  }
+
+  .consulting-page .page-hero-visual {
+    min-height: 400px;
+  }
+
+  .consulting-page .services-intro-grid,
+  .consulting-page .about-preview-grid,
+  .consulting-page .additional-support-grid {
+    gap: 45px;
+  }
+
+  .consulting-page .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .consulting-page .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 45px;
+  }
+
+}
+
+/* =========================================================
+   23. RESPONSIVE - 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .consulting-page .container {
+    width: min(100% - 36px, var(--consulting-container));
+  }
+
+  .consulting-page .section-padding {
+    padding: 75px 0;
+  }
+
+  .consulting-page .page-hero-grid,
+  .consulting-page .services-intro-grid,
+  .consulting-page .about-preview-grid,
+  .consulting-page .additional-support-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .consulting-page .page-hero-content h1 {
+    font-size: clamp(37px, 9vw, 49px);
+  }
+
+  .consulting-page .page-hero-visual {
+    min-height: 370px;
+  }
+
+  .consulting-page .services-intro-heading h2,
+  .consulting-page .about-preview-content h2,
+  .consulting-page .additional-support-content h2 {
+    font-size: 34px;
+  }
+
+  .consulting-page .legal-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consulting-page .legal-service-content > p {
+    min-height: auto;
+  }
+
+  .consulting-page .framework-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .consulting-page .framework-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consulting-page .framework-card {
+    min-height: auto;
+  }
+
+  .consulting-page .about-preview-image,
+  .consulting-page .about-preview-image > img {
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .consulting-page .about-image-label {
+    right: 12px;
+    bottom: 15px;
+  }
+
+  .consulting-page .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 20px;
+  }
+
+  .consulting-page .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .consulting-page .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 20px 0;
+    gap: 13px;
+  }
+
+}
+
+/* =========================================================
+   24. RESPONSIVE - 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .consulting-page .container {
+    width: calc(100% - 30px);
+  }
+
+  .consulting-page .section-padding {
+    padding: 60px 0;
+  }
+
+  
+
+  
+
+  
+
+  .consulting-page .page-hero-content h1 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .consulting-page .page-hero-content > p {
+    font-size: 13px;
+  }
+
+  .consulting-page .page-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .consulting-page .page-hero-actions .btn {
+    width: 100%;
+  }
+
+  .consulting-page .page-hero-visual {
+    min-height: 310px;
+  }
+
+  .consulting-page .section-heading h2,
+  .consulting-page .framework-heading h2 {
+    font-size: 30px;
+  }
+
+  .consulting-page .legal-service-card {
+    padding: 25px;
+  }
+
+  .consulting-page .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consulting-page .stat-card {
+    padding: 25px;
+  }
+
+  .consulting-page .additional-support-item {
+    grid-template-columns: 42px 1fr 16px;
+    gap: 12px;
+  }
+
+  .consulting-page .additional-support-item-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .consulting-page .additional-support-item h3 {
+    font-size: 12px;
+  }
+
+  .consulting-page .additional-support-item p {
+    font-size: 10px;
+  }
+
+  .consulting-page .cta-content h2 {
+    font-size: 31px;
+  }
+
+  .consulting-page .cta-actions {
+    flex-direction: column;
+  }
+
+  .consulting-page .cta-actions .btn {
+    width: 100%;
+  }
+
+  .consulting-page .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .consulting-page .footer-brand {
+    grid-column: auto;
+  }
+
+  .consulting-page .footer-legal-links {
+    gap: 17px;
+  }
+
+  .consulting-page .back-to-top {
+    right: 15px;
+    bottom: 15px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+/* =========================================================
+   25. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .consulting-page *,
+  .consulting-page *::before,
+  .consulting-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
+

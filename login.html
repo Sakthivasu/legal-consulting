@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="description" content="Securely access your LEXORA Legal & Advisory account.">
+    <meta name="theme-color" content="#203858">
+
+    <title>Login | LEXORA Legal & Advisory</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Login Page CSS -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Common JavaScript -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Login Page JavaScript -->
+    <script src="js/login.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/home-shell.css">
+  <!-- Shared shell: preloader, header, mobile menu (keep last) -->
+  <link rel="stylesheet" href="css/shell.css">
+</head>
+
+<body class="auth-page login-page no-site-nav">
+<div class="preloader" id="preloader" aria-label="Loading website">
+
+    <div class="preloader-inner">
+
+      <div class="preloader-brand">
+
+        <span class="preloader-symbol">L</span>
+
+        <div class="preloader-brand-text">
+          <strong>LEXORA</strong>
+          <span>LEGAL & ADVISORY</span>
+        </div>
+
+      </div>
+
+      <div class="preloader-decoration">
+
+        <span class="preloader-ring ring-one"></span>
+        <span class="preloader-ring ring-two"></span>
+
+        <div class="preloader-icon">
+          <i data-lucide="scale"></i>
+        </div>
+
+      </div>
+
+      <h2 class="preloader-title">
+        Legal Clarity.
+      </h2>
+
+      <p class="preloader-message" id="preloader-message">
+        Preparing Your Experience...
+      </p>
+
+      <div class="preloader-progress-wrapper">
+
+        <div class="preloader-progress-track">
+
+          <div class="preloader-progress" id="preloader-progress"></div>
+
+        </div>
+
+        <div class="preloader-progress-info">
+
+          <span>LEXORA EXPERIENCE</span>
+
+          <span id="preloader-percentage">0%</span>
+
+        </div>
+
+      </div>
+
+      <span class="preloader-bottom-text">
+        LEGAL & BUSINESS ADVISORY
+      </span>
+
+    </div>
+
+  </div>
+
+
+<main class="auth-main">
+
+        <div class="container auth-container">
+
+            <section class="auth-form-panel">
+              <div class="auth-form-content">
+
+                <a href="index.html" class="auth-home-link">
+                  <i data-lucide="arrow-left" aria-hidden="true"></i>
+                  Back to Home
+                </a>
+
+
+
+            <!-- ==================================================
+                 LEFT SIDE - LOGIN FORM
+            =======================================================
+                         ACCOUNT TYPE SELECTION
+                    ================================================== -->
+
+                    <div class="auth-account-type">
+
+                        <span class="auth-field-label">
+                            Select Account Type
+                        </span>
+
+                        <div class="auth-account-options">
+
+
+                            <!-- CLIENT -->
+
+                            <label class="auth-account-option active">
+
+                                <input
+                                    type="radio"
+                                    name="account-type"
+                                    value="customer"
+                                    checked
+                                >
+
+                                <span class="auth-account-option-content">
+
+                                    <i data-lucide="user-round"></i>
+
+                                    <span>Client</span>
+
+                                </span>
+
+                            </label>
+
+
+                            <!-- AGENCY -->
+
+                            <label class="auth-account-option">
+
+                                <input
+                                    type="radio"
+                                    name="account-type"
+                                    value="agency"
+                                >
+
+                                <span class="auth-account-option-content">
+
+                                    <i data-lucide="briefcase-business"></i>
+
+                                    <span>Agency</span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================================
+                         LOGIN FORM
+                    ================================================== -->
+
+                    <form
+                        id="login-form"
+                        class="auth-form"
+                        novalidate>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="login-email">
+                                Email Address <span>*</span>
+                            </label>
+
+                            <div class="auth-input-wrapper">
+
+                                <i data-lucide="mail"></i>
+
+                                <input
+                                    type="email"
+                                    id="login-email"
+                                    name="email"
+                                    placeholder="Enter your email address"
+                                    autocomplete="username"
+                                    required
+                                >
+
+                            </div>
+
+                            <small
+                                class="form-error"
+                                id="login-email-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-group">
+
+                            <div class="auth-label-row">
+
+                                <label for="login-password">
+                                    Password <span>*</span>
+                                </label>
+
+                                <button
+                                    type="button"
+                                    class="auth-text-button"
+                                    id="forgot-password-trigger">
+
+                                    Forgot password?
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="auth-input-wrapper">
+
+                                <i data-lucide="lock-keyhole"></i>
+
+                                <input
+                                    type="password"
+                                    id="login-password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="login-password-toggle"
+                                    aria-label="Show password"
+                                    aria-pressed="false">
+
+                                    <i data-lucide="eye"></i>
+
+                                </button>
+
+                            </div>
+
+                            <small
+                                class="form-error"
+                                id="login-password-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- REMEMBER ME -->
+
+                        <div class="auth-form-options">
+
+                            <label class="auth-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="login-remember"
+                                    name="remember"
+                                >
+
+                                <span>Remember me</span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- FORM STATUS -->
+
+                        <div
+                            class="auth-form-status"
+                            id="login-form-status"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+
+                        <!-- SUBMIT BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary auth-submit-btn"
+                            id="login-submit-btn">
+
+                            <span>Sign In</span>
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </button>
+
+
+                        <!-- DIVIDER -->
+
+                        <div class="auth-divider">
+
+                            <span>OR</span>
+
+                        </div>
+
+
+                        <!-- SIGNUP LINK -->
+
+                        <p class="auth-switch-text">
+
+                            Don't have an account?
+
+                            <a href="signup.html">
+                                Create an account
+                            </a>
+
+                        </p>
+
+                    </form>
+
+
+                    <!-- ==================================================
+                         FORGOT PASSWORD PANEL
+                    ================================================== -->
+
+                    <section
+                        class="forgot-password-panel"
+                        id="forgot-password-panel"
+                        hidden>
+
+
+                        <div class="forgot-password-icon">
+
+                            <i data-lucide="mail"></i>
+
+                        </div>
+
+
+                        <h2>
+                            Reset Your Password
+                        </h2>
+
+
+                        <p>
+                            Enter your registered email address.
+                            If password recovery is configured,
+                            you will receive further instructions.
+                        </p>
+
+
+                        <form
+                            id="forgot-password-form"
+                            novalidate>
+
+
+                            <div class="form-group">
+
+                                <label for="forgot-email">
+                                    Email Address <span>*</span>
+                                </label>
+
+                                <div class="auth-input-wrapper">
+
+                                    <i data-lucide="mail"></i>
+
+                                    <input
+                                        type="email"
+                                        id="forgot-email"
+                                        name="email"
+                                        placeholder="Enter your registered email"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="forgot-email-error">
+                                </small>
+
+                            </div>
+
+
+                            <div
+                                class="forgot-password-status"
+                                id="forgot-password-status"
+                                role="status"
+                                aria-live="polite">
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary auth-submit-btn">
+
+                                <span>Request Password Reset</span>
+
+                                <i data-lucide="arrow-right"></i>
+
+                            </button>
+
+                        </form>
+
+
+                        <button
+                            type="button"
+                            class="forgot-back-button"
+                            id="forgot-password-back">
+
+                            <i data-lucide="arrow-left"></i>
+
+                            Back to Login
+
+                        </button>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         SECURITY NOTE
+                    ================================================== -->
+
+                    <div class="auth-security-note">
+
+                        <i data-lucide="shield-check"></i>
+
+                        <span>
+                            Your account access should be protected
+                            with secure authentication.
+                        </span>
+
+                    </div>
+
+              </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 RIGHT SIDE - PROFESSIONAL IMAGE & CONTENT
+            ================================================== -->
+
+            <section class="auth-visual-panel">
+
+
+                <!-- BACKGROUND IMAGE -->
+
+                <div class="auth-visual-image">
+
+                    <img
+                        src="img/clarisse-meyer-jKU2NneZAbI-unsplash.webp"
+                        alt="Professional legal and business office"
+                        loading="eager"
+                    >
+
+                </div>
+
+
+                <!-- IMAGE OVERLAY -->
+
+                <div class="auth-visual-overlay"></div>
+
+
+                <!-- VISUAL CONTENT -->
+
+                <div class="auth-visual-content">
+
+
+                    <span class="auth-visual-label">
+
+                        <span class="visual-label-line"></span>
+
+                        LEXORA LEGAL & ADVISORY
+
+                    </span>
+
+
+                    <h2>
+
+                        Clarity Begins
+
+                        <span>
+                            With the Right Conversation.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Access your account to manage consultation
+                        requests, review important updates and stay
+                        connected with our professional advisory team.
+                    </p>
+
+
+                    <!-- SERVICE HIGHLIGHTS -->
+
+                    <div class="auth-visual-highlights">
+
+
+                        <div class="auth-highlight-item">
+
+                            <div class="auth-highlight-icon">
+
+                                <i data-lucide="scale"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Professional Guidance
+                                </h3>
+
+                                <p>
+                                    Clear direction for important
+                                    legal decisions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="auth-highlight-item">
+
+                            <div class="auth-highlight-icon">
+
+                                <i data-lucide="shield-check"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Trusted Advisory
+                                </h3>
+
+                                <p>
+                                    A structured approach to your
+                                    business and legal needs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="auth-highlight-item">
+
+                            <div class="auth-highlight-icon">
+
+                                <i data-lucide="messages-square"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Connected Support
+                                </h3>
+
+                                <p>
+                                    Stay updated on your consultation
+                                    and enquiry requests.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- VISUAL FOOTER -->
+
+                    <div class="auth-visual-bottom">
+
+                        <span class="auth-visual-line"></span>
+
+                        <span>
+                            Legal Clarity. Strategic Confidence.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</body>
+</html>

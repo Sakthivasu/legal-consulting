@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="description" content="Create your LEXORA Legal & Advisory account and connect with our professional team.">
+    <meta name="theme-color" content="#203858">
+
+    <title>Create Account | LEXORA Legal & Advisory</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Signup CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+
+    <!-- Main JavaScript -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Signup JavaScript -->
+    <script src="js/signup.js" defer></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/home-shell.css">
+  <!-- Shared shell: preloader, header, mobile menu (keep last) -->
+  <link rel="stylesheet" href="css/shell.css">
+</head>
+
+<body class="auth-page signup-page no-site-nav">
+<div class="preloader" id="preloader" aria-label="Loading website">
+
+    <div class="preloader-inner">
+
+      <div class="preloader-brand">
+
+        <span class="preloader-symbol">L</span>
+
+        <div class="preloader-brand-text">
+          <strong>LEXORA</strong>
+          <span>LEGAL & ADVISORY</span>
+        </div>
+
+      </div>
+
+      <div class="preloader-decoration">
+
+        <span class="preloader-ring ring-one"></span>
+        <span class="preloader-ring ring-two"></span>
+
+        <div class="preloader-icon">
+          <i data-lucide="scale"></i>
+        </div>
+
+      </div>
+
+      <h2 class="preloader-title">
+        Legal Clarity.
+      </h2>
+
+      <p class="preloader-message" id="preloader-message">
+        Preparing Your Experience...
+      </p>
+
+      <div class="preloader-progress-wrapper">
+
+        <div class="preloader-progress-track">
+
+          <div class="preloader-progress" id="preloader-progress"></div>
+
+        </div>
+
+        <div class="preloader-progress-info">
+
+          <span>LEXORA EXPERIENCE</span>
+
+          <span id="preloader-percentage">0%</span>
+
+        </div>
+
+      </div>
+
+      <span class="preloader-bottom-text">
+        LEGAL & BUSINESS ADVISORY
+      </span>
+
+    </div>
+
+  </div>
+
+
+<main class="auth-main signup-main">
+
+        <div class="container auth-container signup-container">
+
+            <section class="auth-form-panel">
+              <div class="auth-form-content">
+
+                <a href="index.html" class="auth-home-link">
+                  <i data-lucide="arrow-left" aria-hidden="true"></i>
+                  Back to Home
+                </a>
+
+
+
+            <!-- =================================
+                 SIGNUP FORM PANEL
+                         ACCOUNT TYPE
+                    ================================== -->
+
+                    <div class="auth-account-type">
+
+                        <span class="auth-field-label">
+                            Choose Account Type
+                        </span>
+
+                        <div class="auth-account-options">
+
+
+                            <!-- Client -->
+                            <label class="auth-account-option active">
+
+                                <input
+                                    type="radio"
+                                    name="signup-account-type"
+                                    value="customer"
+                                    checked
+                                >
+
+                                <span class="auth-account-option-content">
+
+                                    <i data-lucide="user-round"></i>
+
+                                    <span>Client</span>
+
+                                </span>
+
+                            </label>
+
+
+                            <!-- Agency -->
+                            <label class="auth-account-option">
+
+                                <input
+                                    type="radio"
+                                    name="signup-account-type"
+                                    value="agency"
+                                >
+
+                                <span class="auth-account-option-content">
+
+                                    <i data-lucide="briefcase-business"></i>
+
+                                    <span>Agency</span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         SIGNUP FORM
+                    ================================== -->
+
+                    <form
+                        id="signup-form"
+                        class="auth-form signup-form"
+                        novalidate>
+
+
+                        <!-- FIRST NAME & LAST NAME -->
+                        <div class="form-row">
+
+
+                            <!-- First Name -->
+                            <div class="form-group">
+
+                                <label for="signup-first-name">
+                                    First Name *
+                                </label>
+
+                                <div class="auth-input-wrapper">
+
+                                    <i data-lucide="user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="signup-first-name"
+                                        name="firstName"
+                                        placeholder="First name"
+                                        autocomplete="given-name"
+                                        maxlength="50"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="signup-first-name-error">
+                                </small>
+
+                            </div>
+
+
+                            <!-- Last Name -->
+                            <div class="form-group">
+
+                                <label for="signup-last-name">
+                                    Last Name *
+                                </label>
+
+                                <div class="auth-input-wrapper">
+
+                                    <i data-lucide="user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="signup-last-name"
+                                        name="lastName"
+                                        placeholder="Last name"
+                                        autocomplete="family-name"
+                                        maxlength="50"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small
+                                    class="form-error"
+                                    id="signup-last-name-error">
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="signup-email">
+                                Email Address *
+                            </label>
+
+                            <div class="auth-input-wrapper">
+
+                                <i data-lucide="mail"></i>
+
+                                <input
+                                    type="email"
+                                    id="signup-email"
+                                    name="email"
+                                    placeholder="Enter your email address"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                            <small
+                                class="form-error"
+                                id="signup-email-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+                        <div class="form-group">
+
+                            <label for="signup-phone">
+                                Phone Number *
+                            </label>
+
+                            <div class="auth-input-wrapper">
+
+                                <i data-lucide="phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="signup-phone"
+                                    name="phone"
+                                    placeholder="Enter your phone number"
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    maxlength="15"
+                                    required
+                                >
+
+                            </div>
+
+                            <small
+                                class="form-error"
+                                id="signup-phone-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- COMPANY - AGENCY ONLY -->
+                        <div
+                            class="form-group"
+                            id="signup-company-group"
+                            hidden>
+
+                            <label for="signup-company">
+                                Company / Organisation Name *
+                            </label>
+
+                            <div class="auth-input-wrapper">
+
+                                <i data-lucide="building-2"></i>
+
+                                <input
+                                    type="text"
+                                    id="signup-company"
+                                    name="company"
+                                    placeholder="Enter your organisation name"
+                                    autocomplete="organization"
+                                    maxlength="100"
+                                >
+
+                            </div>
+
+                            <small
+                                class="form-error"
+                                id="signup-company-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+                        <div class="form-group">
+
+                            <label for="signup-password">
+                                Create Password *
+                            </label>
+
+                            <div class="auth-input-wrapper">
+
+                                <i data-lucide="lock-keyhole"></i>
+
+                                <input
+                                    type="password"
+                                    id="signup-password"
+                                    name="password"
+                                    placeholder="Create a strong password"
+                                    autocomplete="new-password"
+                                    minlength="8"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-password-target="signup-password"
+                                    aria-label="Show password"
+                                    aria-pressed="false">
+
+                                    <i data-lucide="eye"></i>
+
+                                </button>
+
+                            </div>
+
+                            <small class="form-hint">
+                                Use at least 8 characters with letters
+                                and numbers.
+                            </small>
+
+                            <small
+                                class="form-error"
+                                id="signup-password-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- CONFIRM PASSWORD -->
+                        <div class="form-group">
+
+                            <label for="signup-confirm-password">
+                                Confirm Password *
+                            </label>
+
+                            <div class="auth-input-wrapper">
+
+                                <i data-lucide="lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="signup-confirm-password"
+                                    name="confirmPassword"
+                                    placeholder="Re-enter your password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-password-target="signup-confirm-password"
+                                    aria-label="Show password"
+                                    aria-pressed="false">
+
+                                    <i data-lucide="eye"></i>
+
+                                </button>
+
+                            </div>
+
+                            <small
+                                class="form-error"
+                                id="signup-confirm-password-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- =================================
+                             TERMS AND CONDITIONS
+                        ================================== -->
+
+                        <div class="signup-terms">
+
+                            <label class="auth-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="signup-terms"
+                                    name="terms"
+                                    required
+                                >
+
+                                <span>
+
+                                    I agree to the
+
+                                    <a href="contact.html" target="_blank">
+                                        Terms of Service
+                                    </a>
+
+                                    and
+
+                                    <a href="contact.html" target="_blank">
+                                        Privacy Policy
+                                    </a>.
+
+                                </span>
+
+                            </label>
+
+                            <small
+                                class="form-error"
+                                id="signup-terms-error">
+                            </small>
+
+                        </div>
+
+
+                        <!-- =================================
+                             FORM STATUS
+                        ================================== -->
+
+                        <div
+                            class="auth-form-status"
+                            id="signup-form-status"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+
+                        <!-- =================================
+                             CREATE ACCOUNT BUTTON
+                        ================================== -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary auth-submit-btn"
+                            id="signup-submit-btn">
+
+                            <span>Create Account</span>
+
+                            <i data-lucide="arrow-right"></i>
+
+                        </button>
+
+
+                        <!-- DIVIDER -->
+                        <div class="auth-divider">
+                            <span>OR</span>
+                        </div>
+
+
+                        <!-- LOGIN LINK -->
+                        <p class="auth-switch-text">
+
+                            Already have an account?
+
+                            <a href="login.html">
+                                Sign in
+                            </a>
+
+                        </p>
+
+                    </form>
+
+
+                    <!-- =================================
+                         SECURITY NOTE
+                    ================================== -->
+
+                    <div class="auth-security-note">
+
+                        <i data-lucide="shield-check"></i>
+
+                        <span>
+                            Your information should be handled securely
+                            and according to our privacy policy.
+                        </span>
+
+                    </div>
+
+              </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 RIGHT SIDE - PROFESSIONAL IMAGE
+            ================================== -->
+
+            <section class="auth-visual-panel signup-visual-panel">
+
+                <!-- Background Image -->
+                <div class="auth-visual-image">
+
+                    <img
+                        src="img/annie-spratt-QckxruozjRg-unsplash.webp"
+                        alt="Professional legal and advisory team working together"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <!-- Image Overlay -->
+                <div class="auth-visual-overlay"></div>
+
+
+                <!-- Visual Content -->
+                <div class="auth-visual-content">
+
+
+                    <!-- Label -->
+                    <span class="auth-visual-label">
+
+                        <span class="visual-label-line"></span>
+
+                        YOUR NEXT STEP STARTS HERE
+
+                    </span>
+
+
+                    <!-- Heading -->
+                    <h2>
+
+                        Build a Stronger
+
+                        <span>Legal Partnership.</span>
+
+                    </h2>
+
+
+                    <!-- Description -->
+                    <p>
+                        Create your LEXORA account to connect with our
+                        team, organise consultation requests and manage
+                        your professional interactions with confidence.
+                    </p>
+
+
+                    <!-- Signup Benefits -->
+                    <div class="signup-benefits">
+
+
+                        <div class="signup-benefit">
+
+                            <div class="signup-benefit-icon">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+
+                            <span>
+                                Secure Account Access
+                            </span>
+
+                        </div>
+
+
+                        <div class="signup-benefit">
+
+                            <div class="signup-benefit-icon">
+                                <i data-lucide="calendar-check"></i>
+                            </div>
+
+                            <span>
+                                Manage Consultation Requests
+                            </span>
+
+                        </div>
+
+
+                        <div class="signup-benefit">
+
+                            <div class="signup-benefit-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+
+                            <span>
+                                Keep Your Updates Organised
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Bottom Content -->
+                    <div class="auth-visual-bottom">
+
+                        <span class="auth-visual-line"></span>
+
+                        <span>
+                            Legal Clarity. Strategic Confidence.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</body>
+</html>

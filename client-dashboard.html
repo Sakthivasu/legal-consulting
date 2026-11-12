@@ -1,0 +1,1819 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Access your LEXORA client dashboard to manage consultations, appointments and documents.">
+  <meta name="theme-color" content="#203858">
+
+  <title>Client Dashboard | LEXORA Legal & Advisory</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dashboard Styles -->
+  <link rel="stylesheet" href="css/client-dashboard.css">
+
+  <!-- Global JavaScript -->
+  <script src="js/script.js" defer></script>
+
+  <!-- Dashboard JavaScript -->
+  <script src="js/client-dashboard.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/home-shell.css">
+  <!-- Shared shell: preloader, header, mobile menu (keep last) -->
+  <link rel="stylesheet" href="css/shell.css">
+</head>
+
+<body class="dashboard-page customer-dashboard-page no-site-nav">
+<div class="preloader" id="preloader" aria-label="Loading website">
+
+    <div class="preloader-inner">
+
+      <div class="preloader-brand">
+
+        <span class="preloader-symbol">L</span>
+
+        <div class="preloader-brand-text">
+          <strong>LEXORA</strong>
+          <span>LEGAL & ADVISORY</span>
+        </div>
+
+      </div>
+
+      <div class="preloader-decoration">
+
+        <span class="preloader-ring ring-one"></span>
+        <span class="preloader-ring ring-two"></span>
+
+        <div class="preloader-icon">
+          <i data-lucide="scale"></i>
+        </div>
+
+      </div>
+
+      <h2 class="preloader-title">
+        Legal Clarity.
+      </h2>
+
+      <p class="preloader-message" id="preloader-message">
+        Preparing Your Experience...
+      </p>
+
+      <div class="preloader-progress-wrapper">
+
+        <div class="preloader-progress-track">
+
+          <div class="preloader-progress" id="preloader-progress"></div>
+
+        </div>
+
+        <div class="preloader-progress-info">
+
+          <span>LEXORA EXPERIENCE</span>
+
+          <span id="preloader-percentage">0%</span>
+
+        </div>
+
+      </div>
+
+      <span class="preloader-bottom-text">
+        LEGAL & BUSINESS ADVISORY
+      </span>
+
+    </div>
+
+  </div>
+
+
+<div class="dashboard-overlay" id="dashboard-overlay"></div>
+
+
+  <!-- ================= CLIENT SIDEBAR ================= -->
+
+  <aside class="dashboard-sidebar" id="dashboard-sidebar">
+
+    <!-- Brand -->
+    <div class="dashboard-sidebar-header">
+
+      <a href="index.html" class="brand-logo" aria-label="LEXORA Home">
+
+        <span class="brand-symbol">L</span>
+
+        <span class="brand-details">
+          <span class="brand-name">LEXORA</span>
+          <span class="brand-tagline">LEGAL & ADVISORY</span>
+        </span>
+
+      </a>
+
+      <button
+        type="button"
+        class="dashboard-sidebar-close"
+        id="dashboard-sidebar-close"
+        aria-label="Close sidebar"
+      >
+        <i data-lucide="x"></i>
+      </button>
+
+    </div>
+
+
+    <!-- Workspace -->
+    <div class="dashboard-workspace">
+
+      <span class="dashboard-workspace-label">YOUR ACCOUNT</span>
+
+      <div class="dashboard-workspace-info">
+
+        <div class="workspace-avatar">
+          <i data-lucide="user-round"></i>
+        </div>
+
+        <div class="workspace-details">
+          <strong>Client Workspace</strong>
+          <span>Personal Account</span>
+        </div>
+
+        <i data-lucide="chevron-down"></i>
+
+      </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="dashboard-sidebar-nav" aria-label="Client dashboard navigation">
+
+      <span class="dashboard-nav-label">MY ACCOUNT</span>
+
+      <a
+        href="#client-overview"
+        class="dashboard-nav-link active"
+        data-dashboard-section="client-overview"
+        aria-current="page"
+      >
+        <i data-lucide="layout-dashboard"></i>
+        <span>Overview</span>
+      </a>
+
+      <a
+        href="#my-consultations"
+        class="dashboard-nav-link"
+        data-dashboard-section="my-consultations"
+      >
+        <i data-lucide="calendar-days"></i>
+        <span>My Consultations</span>
+        <span class="dashboard-nav-count">2</span>
+      </a>
+
+      <a
+        href="#my-bookings"
+        class="dashboard-nav-link"
+        data-dashboard-section="my-bookings"
+      >
+        <i data-lucide="calendar-check"></i>
+        <span>Booking History</span>
+      </a>
+
+      <a
+        href="#my-documents"
+        class="dashboard-nav-link"
+        data-dashboard-section="my-documents"
+      >
+        <i data-lucide="folder-open"></i>
+        <span>My Documents</span>
+      </a>
+
+
+      <span class="dashboard-nav-label">ACCOUNT</span>
+
+      <a
+        href="#client-notifications"
+        class="dashboard-nav-link"
+        data-dashboard-section="client-notifications"
+      >
+        <i data-lucide="bell"></i>
+        <span>Notifications</span>
+        <span class="dashboard-nav-count">2</span>
+      </a>
+
+      <a
+        href="#client-profile"
+        class="dashboard-nav-link"
+        data-dashboard-section="client-profile"
+      >
+        <i data-lucide="user-round"></i>
+        <span>My Profile</span>
+      </a>
+
+      <a
+        href="#client-settings"
+        class="dashboard-nav-link"
+        data-dashboard-section="client-settings"
+      >
+        <i data-lucide="settings"></i>
+        <span>Account Settings</span>
+      </a>
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+    <div class="dashboard-sidebar-bottom">
+
+      <div class="dashboard-help-card">
+
+        <div class="dashboard-help-icon">
+          <i data-lucide="headset"></i>
+        </div>
+
+        <strong>Need some help?</strong>
+
+        <p>
+          Contact our team for assistance with your account.
+        </p>
+
+        <a href="contact.html">
+          Get Support
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </div>
+
+
+      <a href="index.html" class="dashboard-sidebar-home">
+        <i data-lucide="external-link"></i>
+        <span>Visit Website</span>
+      </a>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ================= MAIN DASHBOARD ================= -->
+
+  <main class="dashboard-main">
+
+    <!-- TOPBAR -->
+
+    <header class="dashboard-topbar">
+
+      <div class="dashboard-topbar-left">
+
+        <button
+          type="button"
+          class="dashboard-menu-toggle"
+          id="dashboard-menu-toggle"
+          aria-label="Open dashboard menu"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="dashboard-breadcrumb">
+          <span>My Account</span>
+          <i data-lucide="chevron-right"></i>
+          <strong id="dashboard-current-page">Overview</strong>
+        </div>
+
+      </div>
+
+
+      <div class="dashboard-topbar-right">
+
+        <!-- Search -->
+        <label class="dashboard-search">
+
+          <i data-lucide="search"></i>
+
+          <input
+            type="search"
+            id="dashboard-global-search"
+            placeholder="Search your account..."
+            aria-label="Search your account"
+          >
+
+          <kbd>Ctrl K</kbd>
+
+        </label>
+
+
+        <!-- Notifications -->
+        <button
+          type="button"
+          class="dashboard-icon-button"
+          id="dashboard-notification-trigger"
+          aria-label="View notifications"
+        >
+          <i data-lucide="bell"></i>
+          <span class="notification-indicator"></span>
+        </button>
+
+
+        <!-- User Menu -->
+        <div class="dashboard-user-menu">
+
+          <button
+            type="button"
+            class="dashboard-user-trigger"
+            id="dashboard-user-trigger"
+            aria-expanded="false"
+            aria-controls="dashboard-user-dropdown"
+          >
+
+            <span class="dashboard-user-avatar">JD</span>
+
+            <span class="dashboard-user-details">
+              <strong>James Davis</strong>
+              <small>Client Account</small>
+            </span>
+
+            <i data-lucide="chevron-down"></i>
+
+          </button>
+
+
+          <div
+            class="dashboard-user-dropdown"
+            id="dashboard-user-dropdown"
+          >
+
+            <a
+              href="#client-profile"
+              data-dashboard-section="client-profile"
+            >
+              <i data-lucide="user-round"></i>
+              My Profile
+            </a>
+
+            <a
+              href="#client-settings"
+              data-dashboard-section="client-settings"
+            >
+              <i data-lucide="settings"></i>
+              Account Settings
+            </a>
+
+            <button type="button" id="dashboard-logout-btn">
+              <i data-lucide="log-out"></i>
+              Sign Out
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD CONTENT ================= -->
+
+    <div class="dashboard-content">
+
+
+      <!-- ================= OVERVIEW ================= -->
+
+      <section
+        class="dashboard-section active"
+        id="client-overview"
+        data-dashboard-panel="client-overview"
+      >
+
+        <!-- Page Heading -->
+        <div class="dashboard-page-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              <span class="eyebrow-line"></span>
+              CLIENT WORKSPACE
+            </span>
+
+            <h1>Welcome back, James</h1>
+
+            <p>
+              Here's an overview of your consultations and account activity.
+            </p>
+
+          </div>
+
+          <a href="booking.html" class="btn btn-primary">
+            <i data-lucide="calendar-plus"></i>
+            Book Consultation
+          </a>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="dashboard-stats-grid">
+
+          <article class="dashboard-stat-card">
+
+            <div class="dashboard-stat-top">
+              <span>Total Consultations</span>
+
+              <span class="dashboard-stat-icon blue">
+                <i data-lucide="calendar-days"></i>
+              </span>
+            </div>
+
+            <strong class="dashboard-stat-value">08</strong>
+
+            <div class="dashboard-stat-footer">
+              <span>All consultation requests</span>
+            </div>
+
+          </article>
+
+
+          <article class="dashboard-stat-card">
+
+            <div class="dashboard-stat-top">
+              <span>Upcoming Meetings</span>
+
+              <span class="dashboard-stat-icon lavender">
+                <i data-lucide="calendar-check"></i>
+              </span>
+            </div>
+
+            <strong class="dashboard-stat-value">02</strong>
+
+            <div class="dashboard-stat-footer">
+              <span>Scheduled consultations</span>
+            </div>
+
+          </article>
+
+
+          <article class="dashboard-stat-card">
+
+            <div class="dashboard-stat-top">
+              <span>Pending Requests</span>
+
+              <span class="dashboard-stat-icon orange">
+                <i data-lucide="clock-3"></i>
+              </span>
+            </div>
+
+            <strong class="dashboard-stat-value">01</strong>
+
+            <div class="dashboard-stat-footer">
+              <span>Awaiting confirmation</span>
+            </div>
+
+          </article>
+
+
+          <article class="dashboard-stat-card">
+
+            <div class="dashboard-stat-top">
+              <span>Available Documents</span>
+
+              <span class="dashboard-stat-icon green">
+                <i data-lucide="file-check"></i>
+              </span>
+            </div>
+
+            <strong class="dashboard-stat-value">05</strong>
+
+            <div class="dashboard-stat-footer">
+              <span>In your document library</span>
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- Next Consultation -->
+        <article class="dashboard-panel client-next-consultation">
+
+          <div class="dashboard-panel-heading">
+
+            <div>
+              <h2>Your Next Consultation</h2>
+              <p>Keep track of your upcoming appointment.</p>
+            </div>
+
+            <span class="status-badge status-confirmed">
+              Confirmed
+            </span>
+
+          </div>
+
+
+          <div class="client-next-consultation-body">
+
+            <div class="client-consultation-date">
+              <span>NOV</span>
+              <strong>12</strong>
+              <small>2026</small>
+            </div>
+
+
+            <div class="client-consultation-info">
+
+              <span class="consultation-category">CORPORATE LAW</span>
+
+              <h3>Corporate Advisory Meeting</h3>
+
+              <p>
+                A consultation to discuss your business legal requirements
+                and corporate advisory needs.
+              </p>
+
+              <div class="client-consultation-meta">
+
+                <span>
+                  <i data-lucide="clock"></i>
+                  10:30 AM – 11:30 AM
+                </span>
+
+                <span>
+                  <i data-lucide="video"></i>
+                  Online Meeting
+                </span>
+
+                <span>
+                  <i data-lucide="user-round"></i>
+                  Alex Morgan
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="client-consultation-actions">
+
+              <button
+                type="button"
+                class="btn btn-outline"
+                data-action="view"
+                data-client="Corporate Advisory Meeting"
+              >
+                View Details
+              </button>
+
+              <button
+                type="button"
+                class="text-action-btn"
+                data-action="reschedule"
+                data-client="Corporate Advisory Meeting"
+              >
+                Request Reschedule
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Overview Grid -->
+        <div class="dashboard-overview-grid">
+
+
+          <!-- Recent Consultations -->
+          <article class="dashboard-panel dashboard-activity-panel">
+
+            <div class="dashboard-panel-heading">
+
+              <div>
+                <h2>Recent Consultations</h2>
+                <p>Track your latest consultation requests.</p>
+              </div>
+
+              <a
+                href="#my-consultations"
+                data-dashboard-section="my-consultations"
+                class="dashboard-view-link"
+              >
+                View All
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+
+            </div>
+
+
+            <div class="dashboard-table-wrapper">
+
+              <table class="dashboard-table">
+
+                <thead>
+                  <tr>
+                    <th>Reference</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr>
+                    <td>LEX-2026-001</td>
+                    <td>Corporate Law</td>
+                    <td>12 Nov 2026</td>
+                    <td>
+                      <span class="status-badge status-confirmed">
+                        Confirmed
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>LEX-2026-002</td>
+                    <td>Contract Management</td>
+                    <td>15 Nov 2026</td>
+                    <td>
+                      <span class="status-badge status-pending">
+                        Pending
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>LEX-2026-003</td>
+                    <td>Legal Compliance</td>
+                    <td>05 Nov 2026</td>
+                    <td>
+                      <span class="status-badge status-completed">
+                        Completed
+                      </span>
+                    </td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </article>
+
+
+          <!-- Quick Actions -->
+          <article class="dashboard-panel dashboard-quick-actions">
+
+            <div class="dashboard-panel-heading">
+
+              <div>
+                <h2>Quick Actions</h2>
+                <p>Manage your account easily.</p>
+              </div>
+
+            </div>
+
+
+            <a href="booking.html" class="quick-action-link">
+
+              <span class="quick-action-icon blue">
+                <i data-lucide="calendar-plus"></i>
+              </span>
+
+              <span>
+                <strong>Book Consultation</strong>
+                <small>Schedule a new meeting</small>
+              </span>
+
+              <i data-lucide="chevron-right"></i>
+
+            </a>
+
+
+            <a
+              href="#my-documents"
+              data-dashboard-section="my-documents"
+              class="quick-action-link"
+            >
+
+              <span class="quick-action-icon lavender">
+                <i data-lucide="folder-open"></i>
+              </span>
+
+              <span>
+                <strong>My Documents</strong>
+                <small>Access your files</small>
+              </span>
+
+              <i data-lucide="chevron-right"></i>
+
+            </a>
+
+
+            <a
+              href="#client-profile"
+              data-dashboard-section="client-profile"
+              class="quick-action-link"
+            >
+
+              <span class="quick-action-icon orange">
+                <i data-lucide="user-round"></i>
+              </span>
+
+              <span>
+                <strong>Update Profile</strong>
+                <small>Manage personal details</small>
+              </span>
+
+              <i data-lucide="chevron-right"></i>
+
+            </a>
+
+
+            <a href="contact.html" class="quick-action-link">
+
+              <span class="quick-action-icon green">
+                <i data-lucide="headset"></i>
+              </span>
+
+              <span>
+                <strong>Contact Support</strong>
+                <small>Get help from our team</small>
+              </span>
+
+              <i data-lucide="chevron-right"></i>
+
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- Recently Shared Documents -->
+        <article class="dashboard-panel">
+
+          <div class="dashboard-panel-heading">
+
+            <div>
+              <h2>Recently Shared Documents</h2>
+              <p>Documents associated with your consultations.</p>
+            </div>
+
+            <a
+              href="#my-documents"
+              data-dashboard-section="my-documents"
+              class="dashboard-view-link"
+            >
+              View All
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+          </div>
+
+
+          <div class="client-document-list">
+
+            <div class="client-document-item">
+
+              <span class="document-file-icon pdf">
+                <i data-lucide="file-text"></i>
+              </span>
+
+              <div class="client-document-details">
+                <strong>Consultation Summary.pdf</strong>
+                <span>Shared 10 Nov 2026 · 1.2 MB</span>
+              </div>
+
+              <span class="status-badge status-completed">
+                Available
+              </span>
+
+              <button
+                type="button"
+                class="table-action-btn"
+                data-action="view"
+                data-client="Consultation Summary.pdf"
+                aria-label="View document"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+
+            <div class="client-document-item">
+
+              <span class="document-file-icon word">
+                <i data-lucide="file-text"></i>
+              </span>
+
+              <div class="client-document-details">
+                <strong>Service Agreement.docx</strong>
+                <span>Shared 08 Nov 2026 · 840 KB</span>
+              </div>
+
+              <span class="status-badge status-completed">
+                Available
+              </span>
+
+              <button
+                type="button"
+                class="table-action-btn"
+                data-action="view"
+                data-client="Service Agreement.docx"
+                aria-label="View document"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <!-- ================= MY CONSULTATIONS ================= -->
+
+      <section
+        class="dashboard-section"
+        id="my-consultations"
+        data-dashboard-panel="my-consultations"
+        hidden
+      >
+
+        <div class="dashboard-page-heading">
+
+          <div>
+            <span class="eyebrow">YOUR APPOINTMENTS</span>
+            <h1>My Consultations</h1>
+            <p>View and track your consultation requests.</p>
+          </div>
+
+          <a href="booking.html" class="btn btn-primary">
+            <i data-lucide="plus"></i>
+            Book Consultation
+          </a>
+
+        </div>
+
+
+        <div class="dashboard-panel">
+
+          <div class="dashboard-toolbar">
+
+            <div class="dashboard-filter-search">
+              <i data-lucide="search"></i>
+
+              <input
+                type="search"
+                id="client-consultation-search"
+                placeholder="Search consultations..."
+                aria-label="Search consultations"
+              >
+            </div>
+
+            <select
+              id="client-consultation-filter"
+              aria-label="Filter consultations"
+            >
+              <option value="all">All Statuses</option>
+              <option value="pending">Pending</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="review">In Review</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+
+          </div>
+
+
+          <div class="dashboard-table-wrapper">
+
+            <table class="dashboard-table" id="client-consultations-table">
+
+              <thead>
+                <tr>
+                  <th>Reference</th>
+                  <th>Service</th>
+                  <th>Professional</th>
+                  <th>Date & Time</th>
+                  <th>Format</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr data-status="confirmed">
+                  <td>LEX-2026-001</td>
+                  <td>Corporate Law</td>
+                  <td>Alex Morgan</td>
+                  <td>12 Nov 2026 · 10:30 AM</td>
+                  <td>Online</td>
+                  <td>
+                    <span class="status-badge status-confirmed">
+                      Confirmed
+                    </span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="table-action-btn"
+                      data-action="view"
+                      data-client="LEX-2026-001"
+                      aria-label="View consultation"
+                    >
+                      <i data-lucide="eye"></i>
+                    </button>
+                  </td>
+                </tr>
+
+
+                <tr data-status="pending">
+                  <td>LEX-2026-002</td>
+                  <td>Contract Management</td>
+                  <td>Olivia Brown</td>
+                  <td>15 Nov 2026 · 02:00 PM</td>
+                  <td>In Person</td>
+                  <td>
+                    <span class="status-badge status-pending">
+                      Pending
+                    </span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="table-action-btn"
+                      data-action="view"
+                      data-client="LEX-2026-002"
+                      aria-label="View consultation"
+                    >
+                      <i data-lucide="eye"></i>
+                    </button>
+                  </td>
+                </tr>
+
+
+                <tr data-status="completed">
+                  <td>LEX-2026-003</td>
+                  <td>Legal Compliance</td>
+                  <td>Daniel Carter</td>
+                  <td>05 Nov 2026 · 11:00 AM</td>
+                  <td>Online</td>
+                  <td>
+                    <span class="status-badge status-completed">
+                      Completed
+                    </span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="table-action-btn"
+                      data-action="view"
+                      data-client="LEX-2026-003"
+                      aria-label="View consultation"
+                    >
+                      <i data-lucide="eye"></i>
+                    </button>
+                  </td>
+                </tr>
+
+
+                <tr data-status="cancelled">
+                  <td>LEX-2026-004</td>
+                  <td>Dispute Resolution</td>
+                  <td>Alex Morgan</td>
+                  <td>01 Nov 2026 · 03:00 PM</td>
+                  <td>Online</td>
+                  <td>
+                    <span class="status-badge status-cancelled">
+                      Cancelled
+                    </span>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="table-action-btn"
+                      data-action="view"
+                      data-client="LEX-2026-004"
+                      aria-label="View consultation"
+                    >
+                      <i data-lucide="eye"></i>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+            <p
+              class="dashboard-empty-state"
+              id="client-consultations-empty"
+              hidden
+            >
+              No consultations match your search.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= BOOKING HISTORY ================= -->
+
+      <section
+        class="dashboard-section"
+        id="my-bookings"
+        data-dashboard-panel="my-bookings"
+        hidden
+      >
+
+        <div class="dashboard-page-heading">
+
+          <div>
+            <span class="eyebrow">BOOKING RECORDS</span>
+            <h1>Booking History</h1>
+            <p>Review your previous and upcoming consultation bookings.</p>
+          </div>
+
+          <a href="booking.html" class="btn btn-primary">
+            <i data-lucide="calendar-plus"></i>
+            New Booking
+          </a>
+
+        </div>
+
+
+        <div class="dashboard-panel">
+
+          <div class="dashboard-table-wrapper">
+
+            <table class="dashboard-table">
+
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Consultation</th>
+                  <th>Booking Date</th>
+                  <th>Meeting Format</th>
+                  <th>Professional</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>LEX-2026-001</td>
+                  <td>Corporate Law</td>
+                  <td>08 Nov 2026</td>
+                  <td>Online</td>
+                  <td>Alex Morgan</td>
+                  <td>
+                    <span class="status-badge status-confirmed">
+                      Confirmed
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>LEX-2026-002</td>
+                  <td>Contract Management</td>
+                  <td>09 Nov 2026</td>
+                  <td>In Person</td>
+                  <td>Olivia Brown</td>
+                  <td>
+                    <span class="status-badge status-pending">
+                      Pending
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>LEX-2026-003</td>
+                  <td>Legal Compliance</td>
+                  <td>02 Nov 2026</td>
+                  <td>Online</td>
+                  <td>Daniel Carter</td>
+                  <td>
+                    <span class="status-badge status-completed">
+                      Completed
+                    </span>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= MY DOCUMENTS ================= -->
+
+      <section
+        class="dashboard-section"
+        id="my-documents"
+        data-dashboard-panel="my-documents"
+        hidden
+      >
+
+        <div class="dashboard-page-heading">
+
+          <div>
+            <span class="eyebrow">YOUR FILE LIBRARY</span>
+            <h1>My Documents</h1>
+            <p>Access documents shared with you by the LEXORA team.</p>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="client-upload-document-btn"
+          >
+            <i data-lucide="upload"></i>
+            Upload Document
+          </button>
+
+        </div>
+
+
+        <div class="dashboard-panel">
+
+          <div class="dashboard-toolbar">
+
+            <div class="dashboard-filter-search">
+              <i data-lucide="search"></i>
+
+              <input
+                type="search"
+                id="client-document-search"
+                placeholder="Search your documents..."
+                aria-label="Search your documents"
+              >
+            </div>
+
+            <select
+              id="client-document-filter"
+              aria-label="Filter documents by type"
+            >
+              <option value="all">All Documents</option>
+              <option value="pdf">PDF</option>
+              <option value="doc">Word Documents</option>
+            </select>
+
+          </div>
+
+
+          <div class="client-document-list" id="client-document-list">
+
+            <div class="client-document-item" data-document-type="pdf">
+
+              <span class="document-file-icon pdf">
+                <i data-lucide="file-text"></i>
+              </span>
+
+              <div class="client-document-details">
+                <strong>Consultation Summary.pdf</strong>
+                <span>Shared by Alex Morgan · 10 Nov 2026 · 1.2 MB</span>
+              </div>
+
+              <span class="status-badge status-completed">
+                Available
+              </span>
+
+              <button
+                type="button"
+                class="table-action-btn"
+                data-action="view"
+                data-client="Consultation Summary.pdf"
+                aria-label="View document"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+
+            <div class="client-document-item" data-document-type="doc">
+
+              <span class="document-file-icon word">
+                <i data-lucide="file-text"></i>
+              </span>
+
+              <div class="client-document-details">
+                <strong>Service Agreement.docx</strong>
+                <span>Shared by Olivia Brown · 08 Nov 2026 · 840 KB</span>
+              </div>
+
+              <span class="status-badge status-completed">
+                Available
+              </span>
+
+              <button
+                type="button"
+                class="table-action-btn"
+                data-action="view"
+                data-client="Service Agreement.docx"
+                aria-label="View document"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+
+            <div class="client-document-item" data-document-type="pdf">
+
+              <span class="document-file-icon pdf">
+                <i data-lucide="file-text"></i>
+              </span>
+
+              <div class="client-document-details">
+                <strong>Legal Review Notes.pdf</strong>
+                <span>Shared by Daniel Carter · 05 Nov 2026 · 960 KB</span>
+              </div>
+
+              <span class="status-badge status-completed">
+                Available
+              </span>
+
+              <button
+                type="button"
+                class="table-action-btn"
+                data-action="view"
+                data-client="Legal Review Notes.pdf"
+                aria-label="View document"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <p
+            class="dashboard-empty-state"
+            id="client-documents-empty"
+            hidden
+          >
+            No documents match your search.
+          </p>
+
+
+          <p class="dashboard-demo-note">
+            <i data-lucide="info"></i>
+            Secure document access and uploads must be connected to your backend.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= NOTIFICATIONS ================= -->
+
+      <section
+        class="dashboard-section"
+        id="client-notifications"
+        data-dashboard-panel="client-notifications"
+        hidden
+      >
+
+        <div class="dashboard-page-heading">
+
+          <div>
+            <span class="eyebrow">ACCOUNT UPDATES</span>
+            <h1>Notifications</h1>
+            <p>Important updates about your consultations and documents.</p>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-outline"
+            id="client-mark-all-read"
+          >
+            <i data-lucide="check-check"></i>
+            Mark All as Read
+          </button>
+
+        </div>
+
+
+        <div class="dashboard-panel">
+
+          <div class="notification-list" id="client-notification-list">
+
+            <article class="dashboard-notification unread">
+
+              <span class="notification-icon blue">
+                <i data-lucide="calendar-check"></i>
+              </span>
+
+              <div class="notification-content">
+                <strong>Consultation confirmed</strong>
+
+                <p>
+                  Your Corporate Law consultation has been confirmed
+                  for 12 November 2026.
+                </p>
+
+                <span>Today · 09:30 AM</span>
+              </div>
+
+              <button
+                type="button"
+                class="notification-read-btn"
+                aria-label="Mark notification as read"
+              ></button>
+
+            </article>
+
+
+            <article class="dashboard-notification unread">
+
+              <span class="notification-icon lavender">
+                <i data-lucide="file-check"></i>
+              </span>
+
+              <div class="notification-content">
+                <strong>New document available</strong>
+
+                <p>
+                  Your consultation summary is ready to view
+                  in your document library.
+                </p>
+
+                <span>Yesterday · 04:15 PM</span>
+              </div>
+
+              <button
+                type="button"
+                class="notification-read-btn"
+                aria-label="Mark notification as read"
+              ></button>
+
+            </article>
+
+
+            <article class="dashboard-notification">
+
+              <span class="notification-icon orange">
+                <i data-lucide="clock"></i>
+              </span>
+
+              <div class="notification-content">
+                <strong>Upcoming consultation reminder</strong>
+
+                <p>
+                  Your next consultation is scheduled for 12 November 2026.
+                </p>
+
+                <span>10 Nov 2026 · 10:00 AM</span>
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= MY PROFILE ================= -->
+
+      <section
+        class="dashboard-section"
+        id="client-profile"
+        data-dashboard-panel="client-profile"
+        hidden
+      >
+
+        <div class="dashboard-page-heading">
+
+          <div>
+            <span class="eyebrow">PERSONAL INFORMATION</span>
+            <h1>My Profile</h1>
+            <p>Review and update your personal information.</p>
+          </div>
+
+        </div>
+
+
+        <div class="dashboard-panel profile-settings-panel">
+
+          <div class="profile-settings-heading">
+
+            <span class="dashboard-user-avatar profile-large-avatar">
+              JD
+            </span>
+
+            <div>
+              <h2>James Davis</h2>
+              <p>LEXORA Client Account</p>
+            </div>
+
+          </div>
+
+
+          <form
+            id="client-profile-form"
+            class="dashboard-settings-form"
+            novalidate
+          >
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="client-first-name">First Name</label>
+
+                <input
+                  type="text"
+                  id="client-first-name"
+                  name="firstName"
+                  value="James"
+                  autocomplete="given-name"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="client-last-name">Last Name</label>
+
+                <input
+                  type="text"
+                  id="client-last-name"
+                  name="lastName"
+                  value="Davis"
+                  autocomplete="family-name"
+                  required
+                >
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="client-profile-email">Email Address</label>
+
+                <input
+                  type="email"
+                  id="client-profile-email"
+                  name="email"
+                  value="james@example.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="client-profile-phone">Phone Number</label>
+
+                <input
+                  type="tel"
+                  id="client-profile-phone"
+                  name="phone"
+                  value="+91 90000 00001"
+                  autocomplete="tel"
+                  required
+                >
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+              <label for="client-profile-company">Company Name</label>
+
+              <input
+                type="text"
+                id="client-profile-company"
+                name="company"
+                value="Davis Enterprises"
+                autocomplete="organization"
+              >
+            </div>
+
+
+            <div class="form-group">
+              <label for="client-profile-address">Address</label>
+
+              <textarea
+                id="client-profile-address"
+                name="address"
+                rows="3"
+                placeholder="Enter your address"
+                autocomplete="street-address"
+              >Chennai, Tamil Nadu, India</textarea>
+            </div>
+
+
+            <div
+              class="dashboard-form-status"
+              id="client-profile-status"
+              role="status"
+              aria-live="polite"
+            ></div>
+
+
+            <button type="submit" class="btn btn-primary">
+              <i data-lucide="save"></i>
+              Save Profile
+            </button>
+
+          </form>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= ACCOUNT SETTINGS ================= -->
+
+      <section
+        class="dashboard-section"
+        id="client-settings"
+        data-dashboard-panel="client-settings"
+        hidden
+      >
+
+        <div class="dashboard-page-heading">
+
+          <div>
+            <span class="eyebrow">PREFERENCES & SECURITY</span>
+            <h1>Account Settings</h1>
+            <p>Manage your account preferences and security options.</p>
+          </div>
+
+        </div>
+
+
+        <!-- Notification Preferences -->
+        <div class="dashboard-panel settings-section">
+
+          <div class="settings-section-heading">
+
+            <span class="settings-section-icon">
+              <i data-lucide="bell"></i>
+            </span>
+
+            <div>
+              <h2>Notification Preferences</h2>
+              <p>Choose which account updates you want to receive.</p>
+            </div>
+
+          </div>
+
+
+          <label class="settings-toggle-row">
+
+            <span>
+              <strong>Consultation Updates</strong>
+              <small>
+                Receive updates about your consultation requests.
+              </small>
+            </span>
+
+            <input
+              type="checkbox"
+              id="setting-consultations"
+              checked
+            >
+
+          </label>
+
+
+          <label class="settings-toggle-row">
+
+            <span>
+              <strong>Document Notifications</strong>
+              <small>
+                Get notified when documents are shared with you.
+              </small>
+            </span>
+
+            <input
+              type="checkbox"
+              id="setting-documents"
+              checked
+            >
+
+          </label>
+
+
+          <label class="settings-toggle-row">
+
+            <span>
+              <strong>General Announcements</strong>
+              <small>
+                Receive important service announcements.
+              </small>
+            </span>
+
+            <input
+              type="checkbox"
+              id="setting-announcements"
+            >
+
+          </label>
+
+        </div>
+
+
+        <!-- Security Settings -->
+        <div class="dashboard-panel settings-section">
+
+          <div class="settings-section-heading">
+
+            <span class="settings-section-icon">
+              <i data-lucide="shield-check"></i>
+            </span>
+
+            <div>
+              <h2>Security</h2>
+              <p>Keep your account protected.</p>
+            </div>
+
+          </div>
+
+
+          <div class="settings-action-row">
+
+            <div>
+              <strong>Password</strong>
+              <small>
+                Update your account password through the secure account service.
+              </small>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline"
+              id="client-change-password-btn"
+            >
+              Change Password
+            </button>
+
+          </div>
+
+
+          <div class="settings-action-row">
+
+            <div>
+              <strong>Account Access</strong>
+              <small>
+                Sign out when you finish using this device.
+              </small>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline"
+              id="client-settings-logout"
+            >
+              Sign Out
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="dashboard-form-status"
+          id="client-settings-status"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="save-client-settings"
+        >
+          <i data-lucide="save"></i>
+          Save Preferences
+        </button>
+
+      </section>
+
+
+      <!-- ================= FOOTER ================= -->
+
+      
+
+    </div>
+
+  </main>
+
+
+  <!-- ================= SHARED MODAL ================= -->
+
+  <div
+    class="dashboard-modal"
+    id="dashboard-modal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="dashboard-modal-backdrop"
+      data-modal-close
+    ></div>
+
+
+    <div
+      class="dashboard-modal-content"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="dashboard-modal-title"
+    >
+
+      <button
+        type="button"
+        class="dashboard-modal-close"
+        data-modal-close
+        aria-label="Close dialog"
+      >
+        <i data-lucide="x"></i>
+      </button>
+
+
+      <span class="dashboard-modal-icon">
+        <i data-lucide="info"></i>
+      </span>
+
+
+      <h2 id="dashboard-modal-title">
+        Account Information
+      </h2>
+
+
+      <p id="dashboard-modal-message">
+        This is a sample dashboard interaction.
+      </p>
+
+
+      <div class="dashboard-modal-actions">
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-modal-close
+        >
+          Close
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= TOAST ================= -->
+
+  <div
+    class="dashboard-toast"
+    id="dashboard-toast"
+    role="status"
+    aria-live="polite"
+  >
+
+    <i data-lucide="check-circle"></i>
+
+    <span id="dashboard-toast-message">
+      Action completed.
+    </span>
+
+  </div>
+
+
+</body>
+</html>

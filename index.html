@@ -1,0 +1,1481 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>LEXORA | Legal Clarity. Strategic Confidence.</title>
+
+  <meta name="description" content="LEXORA provides professional legal advisory, corporate consulting, compliance and business strategy services.">
+
+  <meta name="theme-color" content="#203858">
+
+  <meta name="author" content="LEXORA Legal & Advisory">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Shared shell: preloader, header, mobile menu -->
+  <link rel="stylesheet" href="css/shell.css">
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js" defer></script>
+
+</head>
+
+<body class="home-page has-site-nav">
+
+  <!-- ==========================================
+       PRELOADER
+  =========================================== -->
+
+  <div class="preloader" id="preloader" aria-label="Loading website">
+
+    <div class="preloader-inner">
+
+      <div class="preloader-brand">
+
+        <span class="preloader-symbol">L</span>
+
+        <div class="preloader-brand-text">
+          <strong>LEXORA</strong>
+          <span>LEGAL & ADVISORY</span>
+        </div>
+
+      </div>
+
+      <div class="preloader-decoration">
+
+        <span class="preloader-ring ring-one"></span>
+        <span class="preloader-ring ring-two"></span>
+
+        <div class="preloader-icon">
+          <i data-lucide="scale"></i>
+        </div>
+
+      </div>
+
+      <h2 class="preloader-title">
+        Legal Clarity.
+      </h2>
+
+      <p class="preloader-message" id="preloader-message">
+        Preparing Your Experience...
+      </p>
+
+      <div class="preloader-progress-wrapper">
+
+        <div class="preloader-progress-track">
+
+          <div class="preloader-progress" id="preloader-progress"></div>
+
+        </div>
+
+        <div class="preloader-progress-info">
+
+          <span>LEXORA EXPERIENCE</span>
+
+          <span id="preloader-percentage">0%</span>
+
+        </div>
+
+      </div>
+
+      <span class="preloader-bottom-text">
+        LEGAL & BUSINESS ADVISORY
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================
+       MOBILE MENU OVERLAY
+  =========================================== -->
+
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+
+  <!-- ==========================================
+       HEADER
+  =========================================== -->
+
+  <header class="site-header" id="site-header">
+
+    <div class="container header-container">
+
+      <!-- Logo -->
+
+      <a href="index.html" class="brand-logo" aria-label="LEXORA Home">
+
+        <span class="brand-symbol">L</span>
+
+        <span class="brand-details">
+          <strong>LEXORA</strong>
+          <small>LEGAL & ADVISORY</small>
+        </span>
+
+      </a>
+
+
+      <!-- Desktop Navigation -->
+
+      <nav class="desktop-navigation" aria-label="Main navigation">
+
+        <a href="index.html" class="nav-link active" aria-current="page">
+          Home
+        </a>
+
+        <a href="services.html" class="nav-link">
+          Legal Services
+        </a>
+
+        <a href="consulting.html" class="nav-link">
+          Consulting
+        </a>
+
+        <a href="about.html" class="nav-link">
+          About
+        </a>
+
+        <a href="insights.html" class="nav-link">
+          Insights
+        </a>
+
+        <a href="contact.html" class="nav-link">
+          Contact
+        </a>
+
+      </nav>
+
+
+      <!-- Header Actions -->
+
+      <div class="header-actions">
+
+        <a href="login.html" class="header-login">
+          Login
+        </a>
+
+        <a href="booking.html" class="btn btn-primary header-cta">
+
+          Book Consultation
+
+          <i data-lucide="arrow-up-right"></i>
+
+        </a>
+
+      </div>
+
+
+      <!-- Mobile Toggle -->
+
+      <button
+        class="mobile-menu-toggle"
+        id="mobile-menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-navigation">
+
+        <i data-lucide="menu"></i>
+
+      </button>
+
+    </div>
+
+
+    <!-- Mobile Navigation -->
+
+    <nav
+      class="mobile-navigation"
+      id="mobile-navigation"
+      aria-label="Mobile navigation">
+
+      <div class="mobile-navigation-header">
+
+        <a href="index.html" class="brand-logo">
+
+          <span class="brand-symbol">L</span>
+
+          <span class="brand-details">
+            <strong>LEXORA</strong>
+            <small>LEGAL & ADVISORY</small>
+          </span>
+
+        </a>
+
+        <button
+          class="mobile-menu-close"
+          id="mobile-menu-close"
+          type="button"
+          aria-label="Close navigation">
+
+          <i data-lucide="x"></i>
+
+        </button>
+
+      </div>
+
+
+      <div class="mobile-navigation-links">
+
+        <a class="active" href="index.html" aria-current="page">
+          <i data-lucide="house"></i>
+          Home
+        </a>
+
+        <a href="services.html">
+          <i data-lucide="scale"></i>
+          Legal Services
+        </a>
+
+        <a href="consulting.html">
+          <i data-lucide="briefcase-business"></i>
+          Consulting
+        </a>
+
+        <a href="about.html">
+          <i data-lucide="building-2"></i>
+          About
+        </a>
+
+        <a href="insights.html">
+          <i data-lucide="book-open"></i>
+          Insights
+        </a>
+
+        <a href="contact.html">
+          <i data-lucide="mail"></i>
+          Contact
+        </a>
+
+      </div>
+
+
+      <div class="mobile-navigation-actions">
+
+        <a href="login.html" class="btn btn-outline">
+          Client Login
+        </a>
+
+        <a href="booking.html" class="btn btn-primary">
+          Book Consultation
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+
+      </div>
+
+
+      <div class="mobile-navigation-footer">
+
+        <p>Legal Clarity. Strategic Confidence.</p>
+
+        <span>LEXORA LEGAL & ADVISORY</span>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ==========================================
+       MAIN CONTENT
+  =========================================== -->
+
+  <main>
+
+
+    <!-- ========================================
+         HERO SECTION
+    ========================================= -->
+
+    <section class="home-hero section-padding">
+
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            TRUSTED LEGAL & BUSINESS ADVISORY
+
+          </span>
+
+
+          <h1>
+            Legal Clarity.
+            <span>Strategic Confidence.</span>
+          </h1>
+
+
+          <p class="hero-description">
+
+            Navigate complex legal challenges and business decisions
+            with clarity, confidence, and a partner committed to your
+            long-term success.
+
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a href="booking.html" class="btn btn-primary btn-large">
+
+              Book a Consultation
+
+              <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+
+            <a href="services.html" class="btn btn-outline btn-large">
+
+              Explore Our Services
+
+              <i data-lucide="arrow-right"></i>
+
+            </a>
+
+          </div>
+
+
+          <div class="hero-trust">
+
+            <div class="hero-trust-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+
+            <p>
+              Professional guidance.
+              <strong>Thoughtful solutions.</strong>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Hero Image -->
+
+        <div class="hero-visual">
+
+          <img
+            src="img/sasun-bughdaryan-zbQ5UaREHx4-unsplash.webp"
+            alt="Professional legal advisory office"
+            fetchpriority="high">
+
+          <div class="hero-image-overlay"></div>
+
+
+          <div class="hero-floating-card">
+
+            <div class="floating-card-icon">
+              <i data-lucide="scale"></i>
+            </div>
+
+            <div>
+              <strong>Clarity in Every Decision</strong>
+              <span>Guidance built around your goals</span>
+            </div>
+
+          </div>
+
+
+          <div class="hero-image-caption">
+
+            <span>LEXORA</span>
+
+            <span>LEGAL & BUSINESS ADVISORY</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         TRUST STRIP
+    ========================================= -->
+
+    <section class="trust-strip">
+
+      <div class="container trust-strip-container">
+
+        <div class="trust-item">
+
+          <i data-lucide="shield-check"></i>
+
+          <span>Confidential Guidance</span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <i data-lucide="target"></i>
+
+          <span>Strategic Thinking</span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <i data-lucide="briefcase-business"></i>
+
+          <span>Business Focused</span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <i data-lucide="handshake"></i>
+
+          <span>Client Partnership</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         INTRODUCTION / SERVICES
+    ========================================= -->
+
+    <section class="home-introduction section-padding">
+
+      <div class="container">
+
+        <div class="section-heading centered-heading">
+
+          <span class="eyebrow">WHAT WE DO</span>
+
+          <h2>
+            A trusted partner for
+            <span>important decisions.</span>
+          </h2>
+
+          <p>
+
+            We bring legal understanding and business insight together
+            to help individuals and organisations move forward with confidence.
+
+          </p>
+
+        </div>
+
+
+        <div class="practice-grid">
+
+
+          <!-- Practice 01 -->
+
+          <article class="practice-card">
+
+            <div class="practice-card-top">
+
+              <span class="practice-number">01</span>
+
+              <div class="practice-icon">
+                <i data-lucide="landmark"></i>
+              </div>
+
+            </div>
+
+            <h3>Legal Services</h3>
+
+            <p>
+
+              Practical legal support for corporate matters,
+              contracts, compliance, and dispute resolution.
+
+            </p>
+
+            <a href="services.html" class="text-link">
+
+              Explore Legal Services
+
+              <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- Practice 02 -->
+
+          <article class="practice-card featured-practice">
+
+            <div class="practice-card-top">
+
+              <span class="practice-number">02</span>
+
+              <div class="practice-icon">
+                <i data-lucide="chart-no-axes-combined"></i>
+              </div>
+
+            </div>
+
+            <h3>Business Consulting</h3>
+
+            <p>
+
+              Strategic guidance that helps organisations manage
+              risk, improve operations, and plan sustainable growth.
+
+            </p>
+
+            <a href="consulting.html" class="text-link">
+
+              Explore Consulting
+
+              <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- Practice 03 -->
+
+          <article class="practice-card">
+
+            <div class="practice-card-top">
+
+              <span class="practice-number">03</span>
+
+              <div class="practice-icon">
+                <i data-lucide="file-check"></i>
+              </div>
+
+            </div>
+
+            <h3>Compliance & Risk</h3>
+
+            <p>
+
+              Clear frameworks and structured advice to support
+              responsible decisions and business continuity.
+
+            </p>
+
+            <a href="services.html" class="text-link">
+
+              Discover Our Approach
+
+              <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         ABOUT PREVIEW
+    ========================================= -->
+
+    <section class="home-about-preview section-padding">
+
+      <div class="container about-preview-grid">
+
+
+        <div class="about-preview-image">
+
+          <img
+            src="img/scott-graham-5fNmWej4tAA-unsplash.webp"
+            alt="Modern professional consulting workspace"
+            loading="lazy">
+
+          <div class="about-image-label">
+
+            <span class="about-image-label-number">01</span>
+
+            <span>Thoughtful advice. Meaningful progress.</span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="about-preview-content">
+
+          <span class="eyebrow">ABOUT LEXORA</span>
+
+          <h2>
+            Where legal expertise meets
+            <span>business perspective.</span>
+          </h2>
+
+          <p>
+
+            Every decision carries an opportunity and a responsibility.
+            At LEXORA, we help clients understand both sides through
+            structured advice, practical thinking, and a commitment
+            to long-term value.
+
+          </p>
+
+
+          <p>
+
+            Our approach is built around listening carefully,
+            understanding the bigger picture, and recommending
+            solutions that support your objectives.
+
+          </p>
+
+
+          <a href="about.html" class="btn btn-primary">
+
+            Discover Our Story
+
+            <i data-lucide="arrow-up-right"></i>
+
+          </a>
+
+
+          <div class="about-preview-points">
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Clear communication</span>
+            </div>
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Practical recommendations</span>
+            </div>
+
+            <div>
+              <i data-lucide="check-circle-2"></i>
+              <span>Client-focused solutions</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         OUR COMMITMENT
+    ========================================= -->
+
+    <section class="home-stats section-padding">
+
+      <div class="container">
+
+        <div class="section-heading centered-heading">
+
+          <span class="eyebrow">OUR COMMITMENT</span>
+
+          <h2>
+            Built around what
+            <span>matters most.</span>
+          </h2>
+
+          <p>
+
+            Our values shape every conversation, recommendation,
+            and client relationship.
+
+          </p>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+
+          <article class="stat-card">
+
+            <i data-lucide="messages-square"></i>
+
+            <strong>01</strong>
+
+            <span>Listen First</span>
+
+            <p>
+              Understand your needs before recommending a solution.
+            </p>
+
+          </article>
+
+
+          <article class="stat-card">
+
+            <i data-lucide="search-check"></i>
+
+            <strong>02</strong>
+
+            <span>Think Clearly</span>
+
+            <p>
+              Evaluate important details with care and perspective.
+            </p>
+
+          </article>
+
+
+          <article class="stat-card">
+
+            <i data-lucide="compass"></i>
+
+            <strong>03</strong>
+
+            <span>Act Strategically</span>
+
+            <p>
+              Focus on practical steps and meaningful outcomes.
+            </p>
+
+          </article>
+
+
+          <article class="stat-card">
+
+            <i data-lucide="handshake"></i>
+
+            <strong>04</strong>
+
+            <span>Build Trust</span>
+
+            <p>
+              Value transparency and long-term client relationships.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         OUR APPROACH
+    ========================================= -->
+
+    <section class="home-approach section-padding">
+
+      <div class="container">
+
+
+        <div class="approach-header">
+
+          <div>
+
+            <span class="eyebrow">OUR APPROACH</span>
+
+            <h2>
+              Simple thinking.
+              <span>Stronger outcomes.</span>
+            </h2>
+
+          </div>
+
+
+          <p>
+
+            Complex challenges deserve a thoughtful process.
+            We make every step clear, structured, and focused
+            on your priorities.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="approach-grid">
+
+
+          <article class="approach-card">
+
+            <span class="approach-card-number">
+              01 / UNDERSTAND
+            </span>
+
+            <div class="approach-icon">
+              <i data-lucide="messages-square"></i>
+            </div>
+
+            <h3>Listen & Understand</h3>
+
+            <p>
+
+              We begin by understanding your situation,
+              priorities, and desired outcomes.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="approach-card">
+
+            <span class="approach-card-number">
+              02 / EVALUATE
+            </span>
+
+            <div class="approach-icon">
+              <i data-lucide="scan-search"></i>
+            </div>
+
+            <h3>Evaluate & Analyse</h3>
+
+            <p>
+
+              We review the relevant details and identify
+              important considerations.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="approach-card">
+
+            <span class="approach-card-number">
+              03 / ADVISE
+            </span>
+
+            <div class="approach-icon">
+              <i data-lucide="lightbulb"></i>
+            </div>
+
+            <h3>Advise & Strategise</h3>
+
+            <p>
+
+              We present clear options and practical
+              recommendations for moving forward.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         HOW WE WORK
+    ========================================= -->
+
+    <section class="home-process section-padding">
+
+      <div class="container">
+
+        <div class="section-heading centered-heading">
+
+          <span class="eyebrow">HOW WE WORK</span>
+
+          <h2>
+            A clear process from
+            <span>start to finish.</span>
+          </h2>
+
+          <p>
+
+            A structured experience designed to make working
+            with LEXORA straightforward.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="process-grid">
+
+
+          <article class="process-item">
+
+            <span class="process-number">01</span>
+
+            <div class="process-icon">
+              <i data-lucide="calendar-check"></i>
+            </div>
+
+            <h3>Book a Consultation</h3>
+
+            <p>
+              Tell us what you need help with and schedule a discussion.
+            </p>
+
+          </article>
+
+
+
+          <article class="process-item">
+
+            <span class="process-number">02</span>
+
+            <div class="process-icon">
+              <i data-lucide="clipboard-list"></i>
+            </div>
+
+            <h3>Share Your Requirements</h3>
+
+            <p>
+              Provide relevant information so we can understand your matter.
+            </p>
+
+          </article>
+
+
+
+          <article class="process-item">
+
+            <span class="process-number">03</span>
+
+            <div class="process-icon">
+              <i data-lucide="messages-square"></i>
+            </div>
+
+            <h3>Discuss Your Options</h3>
+
+            <p>
+              Explore possible approaches and understand the next steps.
+            </p>
+
+          </article>
+
+
+
+          <article class="process-item">
+
+            <span class="process-number">04</span>
+
+            <div class="process-icon">
+              <i data-lucide="move-up-right"></i>
+            </div>
+
+            <h3>Move Forward</h3>
+
+            <p>
+              Proceed with a clear direction and an agreed action plan.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         FEATURED INSIGHTS
+    ========================================= -->
+
+    <section class="home-insights section-padding">
+
+      <div class="container">
+
+
+        <div class="insights-heading">
+
+          <div>
+
+            <span class="eyebrow">LATEST INSIGHTS</span>
+
+            <h2>
+              Ideas for better
+              <span>decisions.</span>
+            </h2>
+
+          </div>
+
+
+          <a href="insights.html" class="text-link">
+
+            View All Insights
+
+            <i data-lucide="arrow-up-right"></i>
+
+          </a>
+
+        </div>
+
+
+
+        <div class="featured-insights-grid">
+
+
+          <!-- Insight 01 -->
+
+          <article class="featured-insight-card">
+
+            <a href="insights.html" class="insight-image">
+
+              <img
+                src="img/scott-graham-OQMZwNd3ThU-unsplash.webp"
+                alt="Business contract documents"
+                loading="lazy">
+
+            </a>
+
+
+            <div class="insight-content">
+
+              <div class="insight-meta">
+
+                <span>LEGAL INSIGHTS</span>
+
+                <span>•</span>
+
+                <span>Business</span>
+
+              </div>
+
+
+              <h3>
+                Understanding the Importance of Clear Business Agreements
+              </h3>
+
+
+              <p>
+
+                Explore why carefully structured agreements
+                support stronger business relationships.
+
+              </p>
+
+
+              <a href="insights.html" class="text-link">
+
+                Read More
+
+                <i data-lucide="arrow-up-right"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- Insight 02 -->
+
+          <article class="featured-insight-card">
+
+            <a href="insights.html" class="insight-image">
+
+              <img
+                src="img/vitaly-gariev-FXRsHglusO4-unsplash.webp"
+                alt="Business professionals discussing strategy"
+                loading="lazy">
+
+            </a>
+
+
+            <div class="insight-content">
+
+              <div class="insight-meta">
+
+                <span>BUSINESS STRATEGY</span>
+
+                <span>•</span>
+
+                <span>Consulting</span>
+
+              </div>
+
+
+              <h3>
+                Making Confident Decisions in a Changing Business Environment
+              </h3>
+
+
+              <p>
+
+                Discover how structured planning can help
+                organisations approach uncertainty.
+
+              </p>
+
+
+              <a href="insights.html" class="text-link">
+
+                Read More
+
+                <i data-lucide="arrow-up-right"></i>
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         CALL TO ACTION
+    ========================================= -->
+
+    <section class="home-cta section-padding">
+
+      <div class="container cta-container">
+
+
+        <div class="cta-content">
+
+          <span class="eyebrow">
+            LET'S START A CONVERSATION
+          </span>
+
+
+          <h2>
+
+            Your next decision deserves
+            <span>a clearer direction.</span>
+
+          </h2>
+
+
+          <p>
+
+            Connect with LEXORA to discuss your legal or
+            business advisory requirements.
+
+          </p>
+
+
+          <div class="cta-actions">
+
+            <a href="booking.html" class="btn btn-light btn-large">
+
+              Book a Consultation
+
+              <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+
+            <a href="contact.html" class="btn btn-cta-outline btn-large">
+
+              Contact Our Team
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="cta-decoration">
+
+          <i data-lucide="scale"></i>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ==========================================
+       FOOTER
+  =========================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+
+      <div class="footer-main">
+
+
+        <!-- Footer Brand -->
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="brand-logo footer-logo">
+
+            <span class="brand-symbol">L</span>
+
+            <span class="brand-details">
+
+              <strong>LEXORA</strong>
+
+              <small>LEGAL & ADVISORY</small>
+
+            </span>
+
+          </a>
+
+
+          <p>
+
+            Legal clarity and strategic confidence for
+            individuals and businesses navigating important decisions.
+
+          </p>
+
+
+          <!-- Social Media -->
+
+          <div class="footer-socials">
+
+            <a
+              href="https://www.instagram.com/"
+              class="social-link instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/"
+              class="social-link linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn">
+
+              <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+            <a
+              href="https://www.youtube.com/"
+              class="social-link youtube"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+            <a
+              href="https://www.facebook.com/"
+              class="social-link facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Explore -->
+
+        <div class="footer-column">
+
+          <h3>Explore</h3>
+
+          <a href="index.html">Home</a>
+
+          <a href="about.html">About Us</a>
+
+          <a href="services.html">Legal Services</a>
+
+          <a href="consulting.html">Consulting</a>
+
+          <a href="insights.html">Insights</a>
+
+        </div>
+
+
+
+        <!-- Services -->
+
+        <div class="footer-column">
+
+          <h3>Our Services</h3>
+
+          <a href="services.html">Corporate Law</a>
+
+          <a href="services.html">Contract Management</a>
+
+          <a href="services.html">Legal Compliance</a>
+
+          <a href="services.html">Dispute Resolution</a>
+
+          <a href="consulting.html">Business Strategy</a>
+
+        </div>
+
+
+
+        <!-- Contact -->
+
+        <div class="footer-column footer-contact">
+
+          <h3>Get in Touch</h3>
+
+
+          <a href="contact.html">
+
+            <i data-lucide="map-pin"></i>
+
+            <span>Contact our office</span>
+
+          </a>
+
+
+          <a href="mailto:info@lexora.example">
+
+            <i data-lucide="mail"></i>
+
+            <span>info@lexora.example</span>
+
+          </a>
+
+
+          <a href="tel:+910000000000">
+
+            <i data-lucide="phone"></i>
+
+            <span>+91 00000 00000</span>
+
+          </a>
+
+
+          <a href="contact.html">
+
+            <i data-lucide="clock"></i>
+
+            <span>Monday – Friday: 9:00 AM – 6:00 PM</span>
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- Footer Bottom -->
+
+      <div class="footer-bottom">
+
+        <p>
+
+          © <span id="current-year">2026</span>
+          LEXORA Legal & Advisory.
+          All rights reserved.
+
+        </p>
+
+
+        <div class="footer-legal-links">
+
+          <a href="contact.html">Contact</a>
+
+          <a href="login.html">Client Login</a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ==========================================
+       BACK TO TOP
+  =========================================== -->
+
+  <button
+    class="back-to-top"
+    id="back-to-top"
+    type="button"
+    aria-label="Back to top">
+
+    <i data-lucide="arrow-up"></i>
+
+  </button>
+
+
+</body>
+
+</html>

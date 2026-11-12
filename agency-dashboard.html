@@ -1,0 +1,1001 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="LEXORA agency dashboard for managing consultations, clients, team members and legal advisory activities.">
+  <meta name="theme-color" content="#203858">
+
+  <title>Agency Dashboard | LEXORA Legal & Advisory</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Main Website CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Dashboard CSS -->
+  <link rel="stylesheet" href="css/agency-dashboard.css">
+
+  <!-- Main Website JavaScript -->
+  <script src="js/script.js" defer></script>
+
+  <!-- Dashboard JavaScript -->
+  <script src="js/agency-dashboard.js" defer></script>
+  <link rel="stylesheet" href="css/home-shell.css">
+  <!-- Shared shell: preloader, header, mobile menu (keep last) -->
+  <link rel="stylesheet" href="css/shell.css">
+</head>
+
+<body class="dashboard-page agency-dashboard-page no-site-nav">
+<div class="preloader" id="preloader" aria-label="Loading website">
+
+    <div class="preloader-inner">
+
+      <div class="preloader-brand">
+
+        <span class="preloader-symbol">L</span>
+
+        <div class="preloader-brand-text">
+          <strong>LEXORA</strong>
+          <span>LEGAL & ADVISORY</span>
+        </div>
+
+      </div>
+
+      <div class="preloader-decoration">
+
+        <span class="preloader-ring ring-one"></span>
+        <span class="preloader-ring ring-two"></span>
+
+        <div class="preloader-icon">
+          <i data-lucide="scale"></i>
+        </div>
+
+      </div>
+
+      <h2 class="preloader-title">
+        Legal Clarity.
+      </h2>
+
+      <p class="preloader-message" id="preloader-message">
+        Preparing Your Experience...
+      </p>
+
+      <div class="preloader-progress-wrapper">
+
+        <div class="preloader-progress-track">
+
+          <div class="preloader-progress" id="preloader-progress"></div>
+
+        </div>
+
+        <div class="preloader-progress-info">
+
+          <span>LEXORA EXPERIENCE</span>
+
+          <span id="preloader-percentage">0%</span>
+
+        </div>
+
+      </div>
+
+      <span class="preloader-bottom-text">
+        LEGAL & BUSINESS ADVISORY
+      </span>
+
+    </div>
+
+  </div>
+
+
+<div class="dashboard-overlay" id="dashboard-overlay"></div>
+
+  <div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+
+      <div class="sidebar-header">
+        <a href="index.html" class="dashboard-brand">
+          <span class="brand-icon">
+            <i data-lucide="scale"></i>
+          </span>
+          <span class="brand-text">
+            <strong>LEXORA</strong>
+            <small>LEGAL & ADVISORY</small>
+          </span>
+        </a>
+
+        <button class="sidebar-close" id="dashboard-sidebar-close" aria-label="Close sidebar">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-workspace">
+        <div class="workspace-avatar">
+          <i data-lucide="building-2"></i>
+        </div>
+        <div>
+          <strong>Agency Workspace</strong>
+          <span>Professional Plan</span>
+        </div>
+        <i data-lucide="chevron-down"></i>
+      </div>
+
+      <div class="sidebar-section-label">WORKSPACE</div>
+
+      <nav class="dashboard-navigation" aria-label="Dashboard navigation">
+
+        <a href="#overview" class="dashboard-nav-link active" data-dashboard-section="overview">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Overview</span>
+        </a>
+
+        <a href="#consultations" class="dashboard-nav-link" data-dashboard-section="consultations">
+          <i data-lucide="calendar-check"></i>
+          <span>Consultations</span>
+          <span class="nav-badge">5</span>
+        </a>
+
+        <a href="#clients" class="dashboard-nav-link" data-dashboard-section="clients">
+          <i data-lucide="users"></i>
+          <span>Clients</span>
+        </a>
+
+        <a href="#team" class="dashboard-nav-link" data-dashboard-section="team">
+          <i data-lucide="user-round"></i>
+          <span>Team Members</span>
+        </a>
+
+        <a href="#documents" class="dashboard-nav-link" data-dashboard-section="documents">
+          <i data-lucide="folder-open"></i>
+          <span>Documents</span>
+        </a>
+
+        <div class="sidebar-section-label sidebar-section-spaced">MANAGEMENT</div>
+
+        <a href="#reports" class="dashboard-nav-link" data-dashboard-section="reports">
+          <i data-lucide="chart-no-axes-combined"></i>
+          <span>Reports & Analytics</span>
+        </a>
+
+        <a href="#notifications" class="dashboard-nav-link" data-dashboard-section="notifications">
+          <i data-lucide="bell"></i>
+          <span>Notifications</span>
+          <span class="nav-badge notification-count">3</span>
+        </a>
+
+        <a href="#profile" class="dashboard-nav-link" data-dashboard-section="profile">
+          <i data-lucide="settings"></i>
+          <span>Agency Settings</span>
+        </a>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <div class="sidebar-help-card">
+          <div class="help-icon">
+            <i data-lucide="headset"></i>
+          </div>
+          <h4>Need assistance?</h4>
+          <p>Our support team is here to help you.</p>
+          <a href="contact.html">Contact Support <i data-lucide="arrow-up-right"></i></a>
+        </div>
+
+        <a href="index.html" class="sidebar-website-link">
+          <i data-lucide="external-link"></i>
+          <span>Back to Website</span>
+        </a>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-main">
+
+      <!-- TOPBAR -->
+      <header class="dashboard-topbar">
+
+        <div class="topbar-left">
+          <button class="dashboard-menu-toggle" id="dashboard-menu-toggle" aria-label="Open menu">
+            <i data-lucide="menu"></i>
+          </button>
+
+          <div class="dashboard-breadcrumb">
+            <span>Workspace</span>
+            <i data-lucide="chevron-right"></i>
+            <strong id="dashboard-current-page">Overview</strong>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+
+          <div class="dashboard-search">
+            <i data-lucide="search"></i>
+            <input type="search" id="dashboard-global-search" placeholder="Search anything...">
+            <kbd>Ctrl K</kbd>
+          </div>
+
+          <button class="topbar-icon-btn" id="dashboard-notification-trigger" aria-label="Notifications">
+            <i data-lucide="bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+
+          <div class="topbar-user">
+            <button class="user-profile-trigger" id="dashboard-user-trigger" aria-expanded="false">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%23203858'/%3E%3Ctext x='48' y='48' dy='.35em' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='38' font-weight='700' fill='%23fff'%3ELA%3C/text%3E%3C/svg%3E" alt="Agency profile">
+              <span class="user-profile-info">
+                <strong>LEXORA Agency</strong>
+                <small>Administrator</small>
+              </span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+
+            <div class="user-dropdown" id="dashboard-user-dropdown" hidden>
+              <a href="#profile" data-dashboard-section="profile">
+                <i data-lucide="user-round"></i> My Profile
+              </a>
+              <a href="#profile" data-dashboard-section="profile">
+                <i data-lucide="settings"></i> Settings
+              </a>
+              <button type="button" id="dashboard-logout-btn">
+                <i data-lucide="log-out"></i> Sign Out
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- DASHBOARD CONTENT -->
+      <div class="dashboard-content">
+
+        <!-- OVERVIEW SECTION -->
+        <section class="dashboard-section active" id="overview" data-dashboard-panel="overview">
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">AGENCY WORKSPACE</span>
+              <h1>Good afternoon, <span>LEXORA Agency</span></h1>
+              <p>Here's what's happening with your agency today.</p>
+            </div>
+            <button class="dashboard-primary-btn" id="dashboard-export-overview">
+              <i data-lucide="download"></i>
+              Export Overview
+            </button>
+          </div>
+
+          <!-- STATISTICS -->
+          <div class="dashboard-stats-grid">
+
+            <article class="dashboard-stat-card">
+              <div class="stat-card-top">
+                <span>Total Consultations</span>
+                <span class="stat-icon navy"><i data-lucide="calendar-check"></i></span>
+              </div>
+              <h2>248</h2>
+              <div class="stat-card-bottom">
+                <span class="stat-positive"><i data-lucide="trending-up"></i> 12.8%</span>
+                <span>vs. last month</span>
+              </div>
+            </article>
+
+            <article class="dashboard-stat-card">
+              <div class="stat-card-top">
+                <span>Active Clients</span>
+                <span class="stat-icon gold"><i data-lucide="users"></i></span>
+              </div>
+              <h2>186</h2>
+              <div class="stat-card-bottom">
+                <span class="stat-positive"><i data-lucide="trending-up"></i> 8.4%</span>
+                <span>vs. last month</span>
+              </div>
+            </article>
+
+            <article class="dashboard-stat-card">
+              <div class="stat-card-top">
+                <span>Pending Requests</span>
+                <span class="stat-icon blue"><i data-lucide="clock-3"></i></span>
+              </div>
+              <h2>24</h2>
+              <div class="stat-card-bottom">
+                <span class="stat-warning">Needs attention</span>
+                <span>Current requests</span>
+              </div>
+            </article>
+
+            <article class="dashboard-stat-card">
+              <div class="stat-card-top">
+                <span>Team Members</span>
+                <span class="stat-icon green"><i data-lucide="user-round-check"></i></span>
+              </div>
+              <h2>12</h2>
+              <div class="stat-card-bottom">
+                <span class="stat-positive"><i data-lucide="check-circle"></i> 10 Active</span>
+                <span>2 Away</span>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- OVERVIEW GRID -->
+          <div class="dashboard-overview-grid">
+
+            <article class="dashboard-panel consultation-overview-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>Recent Consultations</h3>
+                  <p>Latest client consultation requests.</p>
+                </div>
+                <button class="text-action" data-dashboard-section="consultations">
+                  View All <i data-lucide="arrow-up-right"></i>
+                </button>
+              </div>
+
+              <div class="dashboard-table-wrapper">
+                <table class="dashboard-table">
+                  <thead>
+                    <tr>
+                      <th>CLIENT</th>
+                      <th>SERVICE</th>
+                      <th>DATE</th>
+                      <th>STATUS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="table-user">
+                          <span class="table-avatar">JD</span>
+                          <span><strong>James Davidson</strong><small>james@example.com</small></span>
+                        </div>
+                      </td>
+                      <td>Corporate Law</td>
+                      <td>Nov 12, 2026</td>
+                      <td><span class="status-badge status-pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table-user">
+                          <span class="table-avatar avatar-gold">SM</span>
+                          <span><strong>Sarah Mitchell</strong><small>sarah@example.com</small></span>
+                        </div>
+                      </td>
+                      <td>Legal Compliance</td>
+                      <td>Nov 13, 2026</td>
+                      <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table-user">
+                          <span class="table-avatar avatar-blue">RK</span>
+                          <span><strong>Robert King</strong><small>robert@example.com</small></span>
+                        </div>
+                      </td>
+                      <td>Business Advisory</td>
+                      <td>Nov 14, 2026</td>
+                      <td><span class="status-badge status-progress">In Progress</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table-user">
+                          <span class="table-avatar avatar-green">EW</span>
+                          <span><strong>Emma Wilson</strong><small>emma@example.com</small></span>
+                        </div>
+                      </td>
+                      <td>Contract Management</td>
+                      <td>Nov 15, 2026</td>
+                      <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="dashboard-panel upcoming-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>Upcoming Schedule</h3>
+                  <p>Your next appointments.</p>
+                </div>
+                <i data-lucide="calendar-days" class="panel-heading-icon"></i>
+              </div>
+
+              <div class="schedule-list">
+                <div class="schedule-item">
+                  <div class="schedule-date"><strong>12</strong><span>NOV</span></div>
+                  <div class="schedule-details">
+                    <strong>Corporate Law Consultation</strong>
+                    <span>James Davidson · 10:30 AM</span>
+                  </div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-date"><strong>13</strong><span>NOV</span></div>
+                  <div class="schedule-details">
+                    <strong>Compliance Review</strong>
+                    <span>Sarah Mitchell · 02:00 PM</span>
+                  </div>
+                </div>
+
+                <div class="schedule-item">
+                  <div class="schedule-date"><strong>14</strong><span>NOV</span></div>
+                  <div class="schedule-details">
+                    <strong>Business Advisory Meeting</strong>
+                    <span>Robert King · 11:00 AM</span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="schedule-action" data-dashboard-section="consultations">
+                View Full Schedule <i data-lucide="arrow-right"></i>
+              </button>
+            </article>
+
+          </div>
+
+          <!-- LOWER OVERVIEW GRID -->
+          <div class="dashboard-overview-grid lower-overview-grid">
+
+            <article class="dashboard-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>Recent Activity</h3>
+                  <p>Latest workspace updates.</p>
+                </div>
+              </div>
+
+              <div class="activity-list">
+                <div class="activity-item">
+                  <span class="activity-icon"><i data-lucide="user-plus"></i></span>
+                  <div>
+                    <strong>New client registered</strong>
+                    <p>Olivia Martin joined your workspace.</p>
+                    <small>Today · 09:42 AM</small>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <span class="activity-icon gold-bg"><i data-lucide="file-check"></i></span>
+                  <div>
+                    <strong>Document uploaded</strong>
+                    <p>Contract Agreement was uploaded.</p>
+                    <small>Today · 08:15 AM</small>
+                  </div>
+                </div>
+
+                <div class="activity-item">
+                  <span class="activity-icon green-bg"><i data-lucide="calendar-check"></i></span>
+                  <div>
+                    <strong>Consultation confirmed</strong>
+                    <p>Sarah Mitchell's appointment confirmed.</p>
+                    <small>Yesterday · 04:30 PM</small>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="dashboard-panel quick-actions-panel">
+              <div class="panel-heading">
+                <div>
+                  <h3>Quick Actions</h3>
+                  <p>Common workspace tasks.</p>
+                </div>
+              </div>
+
+              <div class="quick-actions-grid">
+                <button class="quick-action" data-dashboard-section="clients">
+                  <span><i data-lucide="user-plus"></i></span>
+                  <strong>Manage Clients</strong>
+                </button>
+                <button class="quick-action" data-dashboard-section="consultations">
+                  <span><i data-lucide="calendar-plus"></i></span>
+                  <strong>Appointments</strong>
+                </button>
+                <button class="quick-action" data-dashboard-section="documents">
+                  <span><i data-lucide="file-plus-2"></i></span>
+                  <strong>Documents</strong>
+                </button>
+                <button class="quick-action" data-dashboard-section="reports">
+                  <span><i data-lucide="chart-column"></i></span>
+                  <strong>View Reports</strong>
+                </button>
+              </div>
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- CONSULTATIONS SECTION -->
+        <section class="dashboard-section" id="consultations" data-dashboard-panel="consultations" hidden>
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">CLIENT MANAGEMENT</span>
+              <h1>Consultations</h1>
+              <p>Manage and monitor all your client appointments.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="dashboard-toolbar">
+              <div class="toolbar-search">
+                <i data-lucide="search"></i>
+                <input type="search" id="consultation-search" placeholder="Search consultations...">
+              </div>
+              <select id="consultation-status-filter" aria-label="Filter consultation status">
+                <option value="all">All Statuses</option>
+                <option value="pending">Pending</option>
+                <option value="confirmed">Confirmed</option>
+                <option value="in progress">In Progress</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table" id="consultations-table">
+                <thead>
+                  <tr>
+                    <th>CLIENT</th>
+                    <th>SERVICE</th>
+                    <th>DATE & TIME</th>
+                    <th>CONSULTANT</th>
+                    <th>STATUS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar">JD</span><span><strong>James Davidson</strong><small>james@example.com</small></span></div></td>
+                    <td>Corporate Law</td>
+                    <td>Nov 12, 2026 · 10:30 AM</td>
+                    <td>David Anderson</td>
+                    <td><span class="status-badge status-pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar avatar-gold">SM</span><span><strong>Sarah Mitchell</strong><small>sarah@example.com</small></span></div></td>
+                    <td>Legal Compliance</td>
+                    <td>Nov 13, 2026 · 02:00 PM</td>
+                    <td>Olivia Brown</td>
+                    <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar avatar-blue">RK</span><span><strong>Robert King</strong><small>robert@example.com</small></span></div></td>
+                    <td>Business Advisory</td>
+                    <td>Nov 14, 2026 · 11:00 AM</td>
+                    <td>Michael Scott</td>
+                    <td><span class="status-badge status-progress">In Progress</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar avatar-green">EW</span><span><strong>Emma Wilson</strong><small>emma@example.com</small></span></div></td>
+                    <td>Contract Management</td>
+                    <td>Nov 15, 2026 · 09:30 AM</td>
+                    <td>David Anderson</td>
+                    <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar avatar-purple">LM</span><span><strong>Lucas Martin</strong><small>lucas@example.com</small></span></div></td>
+                    <td>Dispute Resolution</td>
+                    <td>Nov 16, 2026 · 03:00 PM</td>
+                    <td>Olivia Brown</td>
+                    <td><span class="status-badge status-completed">Completed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="empty-state" id="consultations-empty" hidden>No consultations match your search.</p>
+          </div>
+        </section>
+
+        <!-- CLIENTS SECTION -->
+        <section class="dashboard-section" id="clients" data-dashboard-panel="clients" hidden>
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">RELATIONSHIP MANAGEMENT</span>
+              <h1>Clients</h1>
+              <p>Manage your agency's client information and relationships.</p>
+            </div>
+            <button class="dashboard-primary-btn" id="add-client-btn">
+              <i data-lucide="user-plus"></i> Add Client
+            </button>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="dashboard-toolbar">
+              <div class="toolbar-search">
+                <i data-lucide="search"></i>
+                <input type="search" id="client-search" placeholder="Search clients...">
+              </div>
+              <select id="client-type-filter" aria-label="Filter client type">
+                <option value="all">All Client Types</option>
+                <option value="individual">Individual</option>
+                <option value="business">Business</option>
+              </select>
+            </div>
+
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table" id="clients-table">
+                <thead>
+                  <tr>
+                    <th>CLIENT</th>
+                    <th>TYPE</th>
+                    <th>PHONE</th>
+                    <th>JOINED DATE</th>
+                    <th>STATUS</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar">JD</span><span><strong>James Davidson</strong><small>james@example.com</small></span></div></td>
+                    <td>Individual</td><td>+1 555 010 1200</td><td>Oct 12, 2026</td>
+                    <td><span class="status-badge status-confirmed">Active</span></td>
+                    <td><button class="table-action-btn" data-action="view" data-client="James Davidson" aria-label="View James Davidson"><i data-lucide="eye"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar avatar-gold">SM</span><span><strong>Sarah Mitchell</strong><small>sarah@example.com</small></span></div></td>
+                    <td>Business</td><td>+1 555 010 2200</td><td>Oct 18, 2026</td>
+                    <td><span class="status-badge status-confirmed">Active</span></td>
+                    <td><button class="table-action-btn" data-action="view" data-client="Sarah Mitchell" aria-label="View Sarah Mitchell"><i data-lucide="eye"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar avatar-blue">RK</span><span><strong>Robert King</strong><small>robert@example.com</small></span></div></td>
+                    <td>Individual</td><td>+1 555 010 3300</td><td>Oct 22, 2026</td>
+                    <td><span class="status-badge status-confirmed">Active</span></td>
+                    <td><button class="table-action-btn" data-action="view" data-client="Robert King" aria-label="View Robert King"><i data-lucide="eye"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-user"><span class="table-avatar avatar-green">EW</span><span><strong>Emma Wilson</strong><small>emma@example.com</small></span></div></td>
+                    <td>Business</td><td>+1 555 010 4400</td><td>Oct 25, 2026</td>
+                    <td><span class="status-badge status-confirmed">Active</span></td>
+                    <td><button class="table-action-btn" data-action="view" data-client="Emma Wilson" aria-label="View Emma Wilson"><i data-lucide="eye"></i></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="empty-state" id="clients-empty" hidden>No clients match your search.</p>
+          </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section class="dashboard-section" id="team" data-dashboard-panel="team" hidden>
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">PEOPLE & PERMISSIONS</span>
+              <h1>Team Members</h1>
+              <p>Manage your legal professionals and agency team.</p>
+            </div>
+            <button class="dashboard-primary-btn" id="add-team-member-btn">
+              <i data-lucide="user-plus"></i> Add Team Member
+            </button>
+          </div>
+
+          <div class="team-grid">
+
+            <article class="team-member-card">
+              <div class="team-member-top">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%23203858'/%3E%3Ctext x='48' y='48' dy='.35em' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='38' font-weight='700' fill='%23fff'%3EDA%3C/text%3E%3C/svg%3E" alt="David Anderson">
+                <span class="status-indicator online"></span>
+              </div>
+              <h3>David Anderson</h3>
+              <p>Senior Legal Consultant</p>
+              <span class="team-role">Administrator</span>
+              <div class="team-member-footer"><span><i data-lucide="mail"></i> david@lexora.com</span><span>Active</span></div>
+            </article>
+
+            <article class="team-member-card">
+              <div class="team-member-top">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%23C8A45D'/%3E%3Ctext x='48' y='48' dy='.35em' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='38' font-weight='700' fill='%23fff'%3EOB%3C/text%3E%3C/svg%3E" alt="Olivia Brown">
+                <span class="status-indicator online"></span>
+              </div>
+              <h3>Olivia Brown</h3>
+              <p>Corporate Law Specialist</p>
+              <span class="team-role">Legal Consultant</span>
+              <div class="team-member-footer"><span><i data-lucide="mail"></i> olivia@lexora.com</span><span>Active</span></div>
+            </article>
+
+            <article class="team-member-card">
+              <div class="team-member-top">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%23315A82'/%3E%3Ctext x='48' y='48' dy='.35em' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='38' font-weight='700' fill='%23fff'%3EMS%3C/text%3E%3C/svg%3E" alt="Michael Scott">
+                <span class="status-indicator away"></span>
+              </div>
+              <h3>Michael Scott</h3>
+              <p>Business Advisory Expert</p>
+              <span class="team-role">Consultant</span>
+              <div class="team-member-footer"><span><i data-lucide="mail"></i> michael@lexora.com</span><span>Away</span></div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- DOCUMENTS SECTION -->
+        <section class="dashboard-section" id="documents" data-dashboard-panel="documents" hidden>
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">FILE MANAGEMENT</span>
+              <h1>Documents</h1>
+              <p>Organize and access your agency documents.</p>
+            </div>
+            <button class="dashboard-primary-btn" id="upload-document-btn">
+              <i data-lucide="upload"></i> Upload Document
+            </button>
+            <input type="file" id="dashboard-file-input" hidden>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="dashboard-toolbar">
+              <div class="toolbar-search">
+                <i data-lucide="search"></i>
+                <input type="search" id="document-search" placeholder="Search documents...">
+              </div>
+              <select id="document-type-filter" aria-label="Filter document type">
+                <option value="all">All File Types</option>
+                <option value="pdf">PDF</option>
+                <option value="doc">Word</option>
+                <option value="xls">Excel</option>
+              </select>
+            </div>
+
+            <div class="dashboard-table-wrapper">
+              <table class="dashboard-table" id="documents-table">
+                <thead>
+                  <tr>
+                    <th>DOCUMENT NAME</th>
+                    <th>TYPE</th>
+                    <th>UPLOADED BY</th>
+                    <th>DATE</th>
+                    <th>SIZE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><div class="document-name"><span class="file-icon pdf"><i data-lucide="file-text"></i></span><strong>Client Agreement.pdf</strong></div></td><td>PDF</td><td>David Anderson</td><td>Nov 10, 2026</td><td>2.4 MB</td></tr>
+                  <tr><td><div class="document-name"><span class="file-icon word"><i data-lucide="file-text"></i></span><strong>Legal Consultation.docx</strong></div></td><td>Word</td><td>Olivia Brown</td><td>Nov 09, 2026</td><td>1.2 MB</td></tr>
+                  <tr><td><div class="document-name"><span class="file-icon excel"><i data-lucide="file-spreadsheet"></i></span><strong>Monthly Report.xlsx</strong></div></td><td>Excel</td><td>Michael Scott</td><td>Nov 07, 2026</td><td>840 KB</td></tr>
+                  <tr><td><div class="document-name"><span class="file-icon pdf"><i data-lucide="file-text"></i></span><strong>Compliance Guidelines.pdf</strong></div></td><td>PDF</td><td>David Anderson</td><td>Nov 05, 2026</td><td>3.1 MB</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="empty-state" id="documents-empty" hidden>No documents match your search.</p>
+          </div>
+        </section>
+
+        <!-- REPORTS SECTION -->
+        <section class="dashboard-section" id="reports" data-dashboard-panel="reports" hidden>
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">BUSINESS PERFORMANCE</span>
+              <h1>Reports & Analytics</h1>
+              <p>Review your agency performance and activity.</p>
+            </div>
+            <button class="dashboard-primary-btn" id="dashboard-export-report">
+              <i data-lucide="download"></i> Export Report
+            </button>
+          </div>
+
+          <div class="report-summary-grid">
+            <article class="dashboard-stat-card">
+              <span>Total Consultations</span><h2>248</h2><span class="stat-positive">12.8% increase</span>
+            </article>
+            <article class="dashboard-stat-card">
+              <span>New Clients</span><h2>36</h2><span class="stat-positive">8.4% increase</span>
+            </article>
+            <article class="dashboard-stat-card">
+              <span>Completed Cases</span><h2>92</h2><span class="stat-positive">6.2% increase</span>
+            </article>
+          </div>
+
+          <article class="dashboard-panel report-chart-panel">
+            <div class="panel-heading">
+              <div>
+                <h3>Consultation Performance</h3>
+                <p>Monthly consultation activity overview.</p>
+              </div>
+              <select id="report-period" aria-label="Select report period">
+                <option value="year">This Year</option>
+                <option value="six">Last 6 Months</option>
+              </select>
+            </div>
+
+            <div class="report-chart">
+              <div class="chart-y-axis">
+                <span>100</span><span>75</span><span>50</span><span>25</span><span>0</span>
+              </div>
+              <div class="chart-content">
+                <div class="chart-grid-lines"><span></span><span></span><span></span><span></span><span></span></div>
+                <div class="chart-columns">
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:45%"></span><small>Jan</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:60%"></span><small>Feb</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:52%"></span><small>Mar</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:72%"></span><small>Apr</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:66%"></span><small>May</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:82%"></span><small>Jun</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:70%"></span><small>Jul</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:88%"></span><small>Aug</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:76%"></span><small>Sep</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:92%"></span><small>Oct</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:84%"></span><small>Nov</small></div>
+                  <div class="report-chart-column"><span class="chart-bar" style="--bar-height:95%"></span><small>Dec</small></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- NOTIFICATIONS SECTION -->
+        <section class="dashboard-section" id="notifications" data-dashboard-panel="notifications" hidden>
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">WORKSPACE UPDATES</span>
+              <h1>Notifications</h1>
+              <p>Stay updated with your agency activities.</p>
+            </div>
+            <button class="dashboard-secondary-btn" id="mark-all-notifications">
+              <i data-lucide="check-check"></i> Mark All as Read
+            </button>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="notification-list" id="dashboard-notification-list">
+
+              <article class="notification-item unread">
+                <span class="notification-item-icon"><i data-lucide="calendar-check"></i></span>
+                <div class="notification-item-content">
+                  <strong>New consultation request</strong>
+                  <p>James Davidson has requested a corporate law consultation.</p>
+                  <small>Today · 09:42 AM</small>
+                </div>
+                <button class="notification-read-btn" aria-label="Mark as read"></button>
+              </article>
+
+              <article class="notification-item unread">
+                <span class="notification-item-icon gold-bg"><i data-lucide="file-text"></i></span>
+                <div class="notification-item-content">
+                  <strong>New document uploaded</strong>
+                  <p>A new client agreement has been added to your documents.</p>
+                  <small>Today · 08:15 AM</small>
+                </div>
+                <button class="notification-read-btn" aria-label="Mark as read"></button>
+              </article>
+
+              <article class="notification-item unread">
+                <span class="notification-item-icon green-bg"><i data-lucide="user-plus"></i></span>
+                <div class="notification-item-content">
+                  <strong>New client registered</strong>
+                  <p>Olivia Martin has successfully registered as a client.</p>
+                  <small>Yesterday · 04:30 PM</small>
+                </div>
+                <button class="notification-read-btn" aria-label="Mark as read"></button>
+              </article>
+
+              <article class="notification-item">
+                <span class="notification-item-icon"><i data-lucide="check-circle"></i></span>
+                <div class="notification-item-content">
+                  <strong>Consultation completed</strong>
+                  <p>Lucas Martin's consultation has been marked completed.</p>
+                  <small>Nov 09, 2026 · 11:20 AM</small>
+                </div>
+                <button class="notification-read-btn" aria-label="Mark as read"></button>
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- PROFILE SECTION -->
+        <section class="dashboard-section" id="profile" data-dashboard-panel="profile" hidden>
+
+          <div class="dashboard-page-heading">
+            <div>
+              <span class="dashboard-eyebrow">WORKSPACE CONFIGURATION</span>
+              <h1>Agency Settings</h1>
+              <p>Manage your agency information and preferences.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-panel profile-panel">
+            <div class="profile-panel-heading">
+              <div class="profile-avatar-large"><i data-lucide="building-2"></i></div>
+              <div>
+                <h3>Agency Information</h3>
+                <p>Update your agency details and contact information.</p>
+              </div>
+            </div>
+
+            <form id="agency-profile-form" novalidate>
+
+              <div class="profile-form-grid">
+
+                <div class="form-group">
+                  <label for="agency-name">Agency Name</label>
+                  <input type="text" id="agency-name" name="agencyName" value="LEXORA Legal & Advisory" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="agency-email">Business Email</label>
+                  <input type="email" id="agency-email" name="agencyEmail" value="contact@lexora.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="agency-phone">Contact Number</label>
+                  <input type="tel" id="agency-phone" name="agencyPhone" value="+1 555 010 1234" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="agency-website">Website</label>
+                  <input type="url" id="agency-website" name="agencyWebsite" value="https://lexora.com">
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="agency-address">Business Address</label>
+                  <textarea id="agency-address" name="agencyAddress" rows="3">123 Business Avenue, New York, USA</textarea>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="agency-description">Agency Description</label>
+                  <textarea id="agency-description" name="agencyDescription" rows="4">LEXORA Legal & Advisory provides professional legal guidance and business consulting services.</textarea>
+                </div>
+
+              </div>
+
+              <div class="profile-form-footer">
+                <p id="agency-profile-status" role="status" aria-live="polite"></p>
+                <button type="submit" class="dashboard-primary-btn">
+                  <i data-lucide="save"></i> Save Changes
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- GENERAL MODAL -->
+  <div class="dashboard-modal" id="dashboard-modal" aria-hidden="true">
+    <div class="dashboard-modal-backdrop" data-modal-close></div>
+    <div class="dashboard-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="dashboard-modal-title">
+      <button class="dashboard-modal-close" data-modal-close aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-icon"><i data-lucide="info"></i></div>
+      <h3 id="dashboard-modal-title">Information</h3>
+      <p id="dashboard-modal-message">Dashboard information.</p>
+      <button class="dashboard-primary-btn" data-modal-close>Got It</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="dashboard-toast" id="dashboard-toast" role="status" aria-live="polite">
+    <i data-lucide="check-circle"></i>
+    <span id="dashboard-toast-message">Action completed.</span>
+  </div>
+
+
+</body>
+</html>

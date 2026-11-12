@@ -1,0 +1,525 @@
+/*
+ * LEXORA Home shell contract.
+ * Rules are sourced from css/style.css and loaded after page-specific stylesheets
+ * so every page uses the Home page header, preloader and footer presentation.
+ */
+
+body:not(.home-page) {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+/* Primary Colors */
+  --primary: #203858;
+  --primary-dark: #152943;
+  --primary-light: #304c70;
+
+  /* Gold Colors */
+  --gold: #C49A55;
+  --gold-light: #D9B77D;
+  --gold-dark: #A87C3B;
+
+  /* Background Colors */
+  --white: #FFFFFF;
+  --off-white: #F7F8FA;
+  --light-bg: #F1F3F6;
+  --soft-bg: #E9EDF2;
+
+  /* Text Colors */
+  --heading: #17283D;
+  --text: #586575;
+  --muted: #8993A1;
+  --border: #E3E7ED;
+
+  /* Status */
+  --success: #2D9470;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Font Sizes */
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-lg: 20px;
+  --fs-xl: 24px;
+  --fs-2xl: 32px;
+  --fs-3xl: 40px;
+  --fs-4xl: 48px;
+  --fs-hero: clamp(42px, 5.5vw, 72px);
+
+  /* Layout */
+  --container: 1200px;
+  --header-height: 88px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-round: 50%;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 15px rgba(23, 40, 61, 0.05);
+  --shadow-md: 0 10px 30px rgba(23, 40, 61, 0.08);
+  --shadow-lg: 0 20px 55px rgba(23, 40, 61, 0.12);
+  --shadow-gold: 0 10px 25px rgba(196, 154, 85, 0.20);
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+  --transition-slow: all 0.6s ease;
+}
+
+body:not(.home-page).menu-open,
+body:not(.home-page).preloader-active {
+overflow: hidden;
+}
+
+body:not(.home-page) .site-header .container, body:not(.home-page) .site-footer .container {
+width: min(100% - 48px, var(--container));
+  margin-inline: auto;
+}
+
+@keyframes orbitRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitRotateReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(196, 154, 85, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 22px rgba(196, 154, 85, 0.25);
+  }
+}
+
+body:not(.home-page) .site-header .brand-logo, body:not(.home-page) .mobile-navigation .brand-logo, body:not(.home-page) .site-footer .brand-logo {
+display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+body:not(.home-page) .site-header .brand-symbol, body:not(.home-page) .mobile-navigation .brand-symbol, body:not(.home-page) .site-footer .brand-symbol {
+width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--gold);
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: 800;
+  transition: var(--transition);
+}
+
+body:not(.home-page) .site-header .brand-logo:hover .brand-symbol, body:not(.home-page) .mobile-navigation .brand-logo:hover .brand-symbol, body:not(.home-page) .site-footer .brand-logo:hover .brand-symbol {
+color: var(--white);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+body:not(.home-page) .site-header .brand-details, body:not(.home-page) .mobile-navigation .brand-details, body:not(.home-page) .site-footer .brand-details {
+display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+body:not(.home-page) .site-header .brand-details strong, body:not(.home-page) .mobile-navigation .brand-details strong, body:not(.home-page) .site-footer .brand-details strong {
+color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+body:not(.home-page) .site-header .brand-details small, body:not(.home-page) .mobile-navigation .brand-details small, body:not(.home-page) .site-footer .brand-details small {
+color: var(--gold-dark);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+body:not(.home-page) .about-preview-content > .btn {
+margin-top: 12px;
+}
+
+body:not(.home-page) .site-footer {
+padding-top: 75px;
+  color: rgba(255, 255, 255, 0.7);
+  background: #14263D;
+}
+
+body:not(.home-page) .footer-main {
+display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr 1.1fr;
+  gap: 45px;
+  padding-bottom: 60px;
+}
+
+body:not(.home-page) .footer-logo .brand-symbol {
+color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+body:not(.home-page) .footer-logo .brand-details strong {
+color: var(--white);
+}
+
+body:not(.home-page) .footer-logo .brand-details small {
+color: var(--gold-light);
+}
+
+body:not(.home-page) .footer-brand > p {
+max-width: 290px;
+  margin-top: 23px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+body:not(.home-page) .footer-socials {
+display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 25px;
+}
+
+body:not(.home-page) .site-footer .social-link {
+width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 50%;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+
+body:not(.home-page) .site-footer .social-link i {
+font-size: 15px;
+}
+
+body:not(.home-page) .site-footer .social-link:hover {
+color: var(--primary);
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  transform: translateY(-4px);
+}
+
+body:not(.home-page) .footer-column {
+display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+body:not(.home-page) .footer-column h3 {
+position: relative;
+  margin-bottom: 12px;
+  padding-bottom: 13px;
+  color: var(--white);
+  font-size: 16px;
+}
+
+body:not(.home-page) .footer-column h3::after {
+position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34px;
+  height: 2px;
+  content: "";
+  background: var(--gold);
+}
+
+body:not(.home-page) .footer-column > a {
+display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+body:not(.home-page) .footer-column > a:hover {
+color: var(--gold-light);
+  transform: translateX(4px);
+}
+
+body:not(.home-page) .footer-contact > a {
+align-items: flex-start;
+}
+
+body:not(.home-page) .footer-contact > a svg {
+width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: var(--gold-light);
+}
+
+body:not(.home-page) .footer-bottom {
+min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body:not(.home-page) .footer-bottom > p {
+color: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+}
+
+body:not(.home-page) .footer-legal-links {
+display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+body:not(.home-page) .footer-legal-links a {
+color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  transition: var(--transition);
+}
+
+body:not(.home-page) .footer-legal-links a:hover {
+color: var(--gold-light);
+}
+
+@media (max-width: 1100px) {
+
+body:not(.home-page) .site-header .container, body:not(.home-page) .site-footer .container {
+width: min(100% - 40px, var(--container));
+}
+
+body:not(.home-page) .site-header .brand-details strong, body:not(.home-page) .mobile-navigation .brand-details strong, body:not(.home-page) .site-footer .brand-details strong {
+font-size: 18px;
+}
+
+body:not(.home-page) .footer-main {
+grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 35px;
+}
+
+body:not(.home-page) .footer-contact {
+grid-column: 2 / 4;
+}
+}
+
+@media (max-width: 900px) {
+
+body:not(.home-page) .hero-actions .btn {
+width: 100%;
+}
+
+body:not(.home-page) .footer-main {
+grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+body:not(.home-page) .footer-contact {
+grid-column: auto;
+}
+}
+
+@media (max-width: 600px) {
+
+body:not(.home-page) .site-header .container, body:not(.home-page) .site-footer .container {
+width: calc(100% - 36px);
+}
+
+body:not(.home-page) .site-header .brand-symbol, body:not(.home-page) .mobile-navigation .brand-symbol, body:not(.home-page) .site-footer .brand-symbol {
+width: 38px;
+    height: 38px;
+    font-size: 22px;
+}
+
+body:not(.home-page) .site-header .brand-details strong, body:not(.home-page) .mobile-navigation .brand-details strong, body:not(.home-page) .site-footer .brand-details strong {
+font-size: 17px;
+    letter-spacing: 1.7px;
+}
+
+body:not(.home-page) .site-header .brand-details small, body:not(.home-page) .mobile-navigation .brand-details small, body:not(.home-page) .site-footer .brand-details small {
+font-size: 7px;
+    letter-spacing: 1.3px;
+}
+
+body:not(.home-page) .hero-actions .btn {
+width: 100%;
+}
+
+body:not(.home-page) .cta-actions .btn {
+width: 100%;
+}
+
+body:not(.home-page) .site-footer {
+padding-top: 55px;
+}
+
+body:not(.home-page) .footer-main {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 20px;
+    padding-bottom: 40px;
+}
+
+body:not(.home-page) .footer-brand {
+grid-column: 1 / -1;
+}
+
+body:not(.home-page) .footer-brand > p {
+max-width: 100%;
+    font-size: 12px;
+}
+
+body:not(.home-page) .footer-column h3 {
+font-size: 14px;
+}
+
+body:not(.home-page) .footer-column {
+gap: 13px;
+}
+
+body:not(.home-page) .footer-column > a {
+font-size: 10px;
+    line-height: 1.6;
+}
+
+body:not(.home-page) .footer-contact {
+grid-column: 1 / -1;
+}
+
+body:not(.home-page) .footer-bottom {
+min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 22px 0;
+}
+
+body:not(.home-page) .footer-bottom > p {
+font-size: 10px;
+    line-height: 1.8;
+}
+
+body:not(.home-page) .footer-legal-links {
+gap: 20px;
+}
+
+body:not(.home-page) .footer-legal-links a {
+font-size: 10px;
+}
+}
+
+@media (max-width: 360px) {
+body:not(.home-page) .site-header .container, body:not(.home-page) .site-footer .container {
+width: calc(100% - 28px);
+}
+
+body:not(.home-page) .site-header .brand-details strong, body:not(.home-page) .mobile-navigation .brand-details strong, body:not(.home-page) .site-footer .brand-details strong {
+font-size: 15px;
+}
+}
+
+/* Dashboard shells retain their own workspace navigation below the shared site header. */
+body.dashboard-page:not(.home-page) .dashboard-sidebar {
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+}
+
+body.dashboard-page:not(.home-page) .dashboard-topbar {
+  top: var(--header-height);
+}
+
+/* Keep shared-shell pages on the viewport-height flex layout used by Home. */
+body:not(.home-page) > main,
+body:not(.home-page) > .page-main,
+body:not(.home-page) > .auth-main,
+body.dashboard-page:not(.home-page) > .dashboard-layout {
+  flex: 1 0 auto;
+}
+
+body:not(.home-page) > .site-footer {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-top: auto;
+}
+
+body.dashboard-page:not(.home-page) > .dashboard-layout {
+  width: 100%;
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100dvh - var(--header-height));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body:not(.home-page) *,
+  body:not(.home-page) *::before,
+  body:not(.home-page) *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   MOBILE-APP BEHAVIOUR (all pages)
+========================================================= */
+
+/* Page-specific stylesheets must never put backdrop-filter on the header:
+   it would trap the fixed mobile menu inside the header box. */
+
+/* One back-to-top button style/visibility contract for every page. */
+.back-to-top.visible,
+.back-to-top.is-visible,
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+a,
+button,
+label,
+input,
+select,
+textarea,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+.back-to-top {
+  right: max(20px, env(safe-area-inset-right, 0px));
+  bottom: max(20px, env(safe-area-inset-bottom, 0px));
+}
+
+/* 16px form controls stop iOS Safari from zooming the page on focus. */
+@media (max-width: 900px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}

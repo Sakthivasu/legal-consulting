@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Request a legal or business consultation with LEXORA Legal & Advisory.">
+  <meta name="theme-color" content="#203858">
+
+  <title>Book a Consultation | LEXORA Legal & Advisory</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Main Website CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Booking Page CSS -->
+  <link rel="stylesheet" href="css/booking.css">
+
+  <!-- Main Website JavaScript -->
+  <script src="js/script.js" defer></script>
+
+  <!-- Booking Page JavaScript -->
+  <script src="js/booking.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/home-shell.css">
+  <!-- Shared shell: preloader, header, mobile menu (keep last) -->
+  <link rel="stylesheet" href="css/shell.css">
+</head>
+
+<body class="booking-page no-site-nav">
+<div class="preloader" id="preloader" aria-label="Loading website">
+
+    <div class="preloader-inner">
+
+      <div class="preloader-brand">
+
+        <span class="preloader-symbol">L</span>
+
+        <div class="preloader-brand-text">
+          <strong>LEXORA</strong>
+          <span>LEGAL & ADVISORY</span>
+        </div>
+
+      </div>
+
+      <div class="preloader-decoration">
+
+        <span class="preloader-ring ring-one"></span>
+        <span class="preloader-ring ring-two"></span>
+
+        <div class="preloader-icon">
+          <i data-lucide="scale"></i>
+        </div>
+
+      </div>
+
+      <h2 class="preloader-title">
+        Legal Clarity.
+      </h2>
+
+      <p class="preloader-message" id="preloader-message">
+        Preparing Your Experience...
+      </p>
+
+      <div class="preloader-progress-wrapper">
+
+        <div class="preloader-progress-track">
+
+          <div class="preloader-progress" id="preloader-progress"></div>
+
+        </div>
+
+        <div class="preloader-progress-info">
+
+          <span>LEXORA EXPERIENCE</span>
+
+          <span id="preloader-percentage">0%</span>
+
+        </div>
+
+      </div>
+
+      <span class="preloader-bottom-text">
+        LEGAL & BUSINESS ADVISORY
+      </span>
+
+    </div>
+
+  </div>
+
+
+<main class="page-main">
+<section class="section-padding booking-main-section">
+      <div class="container">
+
+        <div class="booking-layout">
+
+          <!-- BOOKING FORM AREA -->
+          <div class="booking-form-area">
+
+            <a href="index.html" class="btn btn-outline booking-home-link">
+              <i data-lucide="arrow-left" aria-hidden="true"></i>
+              Back to Home
+            </a>
+
+            <div class="booking-form-heading">
+
+              <span class="eyebrow">
+                <span class="eyebrow-line"></span>
+                BOOK YOUR SESSION
+              </span>
+
+              <h2>Consultation Request</h2>
+
+              <p>
+                Complete each step to submit your preferred
+                consultation details.
+              </p>
+
+            </div>
+
+
+            <!-- BOOKING PROGRESS -->
+            <div class="booking-progress" id="booking-progress">
+
+              <div class="booking-progress-step active" data-progress-step="1">
+                <span class="progress-step-circle">1</span>
+                <span class="progress-step-label">Service</span>
+              </div>
+
+              <div class="booking-progress-line"></div>
+
+              <div class="booking-progress-step" data-progress-step="2">
+                <span class="progress-step-circle">2</span>
+                <span class="progress-step-label">Schedule</span>
+              </div>
+
+              <div class="booking-progress-line"></div>
+
+              <div class="booking-progress-step" data-progress-step="3">
+                <span class="progress-step-circle">3</span>
+                <span class="progress-step-label">Details</span>
+              </div>
+
+              <div class="booking-progress-line"></div>
+
+              <div class="booking-progress-step" data-progress-step="4">
+                <span class="progress-step-circle">4</span>
+                <span class="progress-step-label">Review</span>
+              </div>
+
+            </div>
+
+
+            <!-- FORM -->
+            <form id="booking-form" class="booking-form" novalidate>
+
+              <!-- STEP 1: SERVICE -->
+              <section class="booking-step active" data-booking-step="1">
+
+                <div class="booking-step-heading">
+                  <span class="step-kicker">STEP 01</span>
+                  <h3>What would you like to discuss?</h3>
+                  <p>Select the consultation area that best matches your needs.</p>
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label for="booking-service">Consultation Type *</label>
+
+                  <select id="booking-service" name="service" required>
+                    <option value="">Choose a consultation type</option>
+                    <option value="Corporate Law">Corporate Law</option>
+                    <option value="Contract Management">Contract Management</option>
+                    <option value="Legal Compliance">Legal Compliance</option>
+                    <option value="Dispute Resolution">Dispute Resolution</option>
+                    <option value="Business Strategy">Business Strategy</option>
+                    <option value="Risk Management">Risk Management</option>
+                    <option value="Operational Consulting">Operational Consulting</option>
+                    <option value="General Legal Enquiry">General Legal Enquiry</option>
+                    <option value="Other Advisory">Other Advisory</option>
+                  </select>
+
+                  <small class="booking-error" id="booking-service-error"></small>
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label>Preferred Consultation Format *</label>
+
+                  <div class="booking-option-grid">
+
+                    <label class="booking-option-card">
+                      <input type="radio" name="consultation-format" value="Online" required>
+
+                      <span class="booking-option-content">
+                        <span class="booking-option-icon">
+                          <i data-lucide="video"></i>
+                        </span>
+
+                        <strong>Online Meeting</strong>
+                        <small>Virtual consultation</small>
+                      </span>
+                    </label>
+
+                    <label class="booking-option-card">
+                      <input type="radio" name="consultation-format" value="In Person">
+
+                      <span class="booking-option-content">
+                        <span class="booking-option-icon">
+                          <i data-lucide="building-2"></i>
+                        </span>
+
+                        <strong>In Person</strong>
+                        <small>Office consultation</small>
+                      </span>
+                    </label>
+
+                    <label class="booking-option-card">
+                      <input type="radio" name="consultation-format" value="Phone">
+
+                      <span class="booking-option-content">
+                        <span class="booking-option-icon">
+                          <i data-lucide="phone"></i>
+                        </span>
+
+                        <strong>Phone Call</strong>
+                        <small>Telephone consultation</small>
+                      </span>
+                    </label>
+
+                  </div>
+
+                  <small class="booking-error" id="booking-format-error"></small>
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label for="booking-professional">Preferred Professional *</label>
+
+                  <select id="booking-professional" name="professional" required>
+                    <option value="">Choose a professional</option>
+                    <option value="First Available Professional">First Available Professional</option>
+                    <option value="Corporate Advisory Team">Corporate Advisory Team</option>
+                    <option value="Legal Services Team">Legal Services Team</option>
+                    <option value="Business Consulting Team">Business Consulting Team</option>
+                  </select>
+
+                  <small class="booking-error" id="booking-professional-error"></small>
+
+                  <p class="booking-field-hint">
+                    These are demonstration team options. Actual professional
+                    assignments must be configured by the firm.
+                  </p>
+                </div>
+
+              </section>
+
+
+              <!-- STEP 2: SCHEDULE -->
+              <section class="booking-step" data-booking-step="2">
+
+                <div class="booking-step-heading">
+                  <span class="step-kicker">STEP 02</span>
+                  <h3>Choose your preferred schedule</h3>
+                  <p>Select a date and preferred time for your consultation.</p>
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label for="booking-date">Preferred Date *</label>
+
+                  <input type="date" id="booking-date" name="date" required>
+
+                  <small class="booking-error" id="booking-date-error"></small>
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label>Preferred Time *</label>
+
+                  <div class="booking-time-grid">
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="09:00 AM" required>
+                      <span>09:00 AM</span>
+                    </label>
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="10:00 AM">
+                      <span>10:00 AM</span>
+                    </label>
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="11:00 AM">
+                      <span>11:00 AM</span>
+                    </label>
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="12:00 PM">
+                      <span>12:00 PM</span>
+                    </label>
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="02:00 PM">
+                      <span>02:00 PM</span>
+                    </label>
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="03:00 PM">
+                      <span>03:00 PM</span>
+                    </label>
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="04:00 PM">
+                      <span>04:00 PM</span>
+                    </label>
+
+                    <label class="booking-time-option">
+                      <input type="radio" name="booking-time" value="05:00 PM">
+                      <span>05:00 PM</span>
+                    </label>
+
+                  </div>
+
+                  <small class="booking-error" id="booking-time-error"></small>
+
+                  <p class="booking-field-hint">
+                    Time slots are sample preferences, not live availability.
+                    The team must confirm the appointment.
+                  </p>
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label for="booking-timezone">Time Zone</label>
+
+                  <select id="booking-timezone" name="timezone">
+                    <option value="Asia/Kolkata">India Standard Time (IST)</option>
+                    <option value="UTC">Coordinated Universal Time (UTC)</option>
+                  </select>
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label for="booking-duration">Expected Duration</label>
+
+                  <select id="booking-duration" name="duration">
+                    <option value="30 minutes">30 minutes</option>
+                    <option value="45 minutes">45 minutes</option>
+                    <option value="60 minutes">60 minutes</option>
+                  </select>
+                </div>
+
+              </section>
+
+
+              <!-- STEP 3: PERSONAL DETAILS -->
+              <section class="booking-step" data-booking-step="3">
+
+                <div class="booking-step-heading">
+                  <span class="step-kicker">STEP 03</span>
+                  <h3>Tell us about yourself</h3>
+                  <p>Provide your contact details so we can follow up on your request.</p>
+                </div>
+
+
+                <div class="booking-field-row">
+
+                  <div class="booking-field-group">
+                    <label for="booking-first-name">First Name *</label>
+
+                    <input
+                      type="text"
+                      id="booking-first-name"
+                      name="firstName"
+                      placeholder="First name"
+                      autocomplete="given-name"
+                      required
+                    >
+
+                    <small class="booking-error" id="booking-first-name-error"></small>
+                  </div>
+
+                  <div class="booking-field-group">
+                    <label for="booking-last-name">Last Name *</label>
+
+                    <input
+                      type="text"
+                      id="booking-last-name"
+                      name="lastName"
+                      placeholder="Last name"
+                      autocomplete="family-name"
+                      required
+                    >
+
+                    <small class="booking-error" id="booking-last-name-error"></small>
+                  </div>
+
+                </div>
+
+
+                <div class="booking-field-row">
+
+                  <div class="booking-field-group">
+                    <label for="booking-email">Email Address *</label>
+
+                    <input
+                      type="email"
+                      id="booking-email"
+                      name="email"
+                      placeholder="you@example.com"
+                      autocomplete="email"
+                      required
+                    >
+
+                    <small class="booking-error" id="booking-email-error"></small>
+                  </div>
+
+                  <div class="booking-field-group">
+                    <label for="booking-phone">Phone Number *</label>
+
+                    <input
+                      type="tel"
+                      id="booking-phone"
+                      name="phone"
+                      placeholder="Enter phone number"
+                      autocomplete="tel"
+                      required
+                      minlength="7"
+                      maxlength="16"
+                    >
+
+                    <small class="booking-error" id="booking-phone-error"></small>
+                  </div>
+
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label for="booking-company">Company / Organisation</label>
+
+                  <input
+                    type="text"
+                    id="booking-company"
+                    name="company"
+                    placeholder="Company name (optional)"
+                    autocomplete="organization"
+                  >
+                </div>
+
+
+                <div class="booking-field-group">
+                  <label for="booking-description">Briefly Describe Your Requirements *</label>
+
+                  <textarea
+                    id="booking-description"
+                    name="description"
+                    rows="5"
+                    placeholder="Tell us what you would like to discuss..."
+                    required
+                    minlength="10"
+                  ></textarea>
+
+                  <small class="booking-error" id="booking-description-error"></small>
+                </div>
+
+
+                <!-- DOCUMENT UPLOAD -->
+                <div class="booking-field-group">
+                  <label for="booking-document">
+                    Supporting Document
+                    <span class="optional-label">(Optional)</span>
+                  </label>
+
+                  <div class="booking-upload-area">
+
+                    <input
+                      type="file"
+                      id="booking-document"
+                      name="document"
+                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                    >
+
+                    <label for="booking-document" class="booking-upload-label">
+
+                      <span class="booking-upload-icon">
+                        <i data-lucide="cloud-upload"></i>
+                      </span>
+
+                      <strong>Choose a file to upload</strong>
+
+                      <span>PDF, DOC, DOCX, JPG or PNG</span>
+
+                      <small>Maximum file size: 5 MB</small>
+
+                    </label>
+
+                    <div class="booking-file-name" id="booking-file-name">
+                      No file selected
+                    </div>
+
+                  </div>
+
+                  <small class="booking-error" id="booking-document-error"></small>
+
+                  <p class="booking-field-hint">
+                    Upload only documents appropriate for an initial enquiry.
+                    Avoid highly sensitive personal information.
+                  </p>
+                </div>
+
+
+                <!-- CONSENT -->
+                <div class="booking-field-group">
+
+                  <label class="booking-checkbox-label">
+                    <input
+                      type="checkbox"
+                      id="booking-consent"
+                      name="consent"
+                      required
+                    >
+
+                    <span>
+                      I confirm that the information provided is accurate
+                      and agree to be contacted regarding this request.
+                    </span>
+                  </label>
+
+                  <small class="booking-error" id="booking-consent-error"></small>
+
+                </div>
+
+              </section>
+
+
+              <!-- STEP 4: REVIEW -->
+              <section class="booking-step" data-booking-step="4">
+
+                <div class="booking-step-heading">
+                  <span class="step-kicker">STEP 04</span>
+                  <h3>Review your consultation request</h3>
+                  <p>Please check your details before submitting your request.</p>
+                </div>
+
+
+                <div class="booking-review-card">
+
+                  <div class="booking-review-heading">
+                    <div>
+                      <span class="review-label">YOUR REQUEST</span>
+                      <h4>Consultation Summary</h4>
+                    </div>
+
+                    <span class="review-icon">
+                      <i data-lucide="clipboard-check"></i>
+                    </span>
+                  </div>
+
+
+                  <div class="booking-review-section">
+                    <h5>Consultation Details</h5>
+
+                    <div class="review-detail-row">
+                      <span>Consultation Type</span>
+                      <strong id="review-service">Not selected</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Format</span>
+                      <strong id="review-format">Not selected</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Professional</span>
+                      <strong id="review-professional">Not selected</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Duration</span>
+                      <strong id="review-duration">Not selected</strong>
+                    </div>
+                  </div>
+
+
+                  <div class="booking-review-section">
+                    <h5>Preferred Schedule</h5>
+
+                    <div class="review-detail-row">
+                      <span>Date</span>
+                      <strong id="review-date">Not selected</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Time</span>
+                      <strong id="review-time">Not selected</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Time Zone</span>
+                      <strong id="review-timezone">Not selected</strong>
+                    </div>
+                  </div>
+
+
+                  <div class="booking-review-section">
+                    <h5>Contact Information</h5>
+
+                    <div class="review-detail-row">
+                      <span>Name</span>
+                      <strong id="review-name">?</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Email</span>
+                      <strong id="review-email">?</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Phone</span>
+                      <strong id="review-phone">?</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Company</span>
+                      <strong id="review-company">?</strong>
+                    </div>
+
+                    <div class="review-detail-row">
+                      <span>Document</span>
+                      <strong id="review-document">No document</strong>
+                    </div>
+                  </div>
+
+
+                  <div class="booking-review-section">
+                    <h5>Requirements</h5>
+
+                    <p class="review-description" id="review-description">
+                      No description provided.
+                    </p>
+                  </div>
+
+                </div>
+
+
+                <div class="booking-demo-notice">
+                  <i data-lucide="info"></i>
+
+                  <p>
+                    This is a demonstration booking interface.
+                    Submitting this form does not confirm an appointment.
+                    A real booking system must send your request to the
+                    firm's backend and receive confirmation from the team.
+                  </p>
+                </div>
+
+              </section>
+
+
+              <!-- FORM NAVIGATION -->
+              <div class="booking-navigation" id="booking-navigation">
+
+                <button
+                  type="button"
+                  class="btn btn-outline booking-prev-btn"
+                  id="booking-prev-btn"
+                  hidden
+                >
+                  <i data-lucide="arrow-left"></i>
+                  Previous
+                </button>
+
+                <span class="booking-navigation-spacer"></span>
+
+                <button
+                  type="button"
+                  class="btn btn-primary booking-next-btn"
+                  id="booking-next-btn"
+                >
+                  Continue
+                  <i data-lucide="arrow-right"></i>
+                </button>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary booking-submit-btn"
+                  id="booking-submit-btn"
+                  hidden
+                >
+                  Submit Request
+                  <i data-lucide="check"></i>
+                </button>
+
+              </div>
+
+
+              <div
+                class="booking-form-status"
+                id="booking-form-status"
+                role="status"
+                aria-live="polite"
+              ></div>
+
+            </form>
+
+
+            <!-- SUCCESS MESSAGE -->
+            <section class="booking-success" id="booking-success" hidden>
+
+              <div class="booking-success-icon">
+                <i data-lucide="check"></i>
+              </div>
+
+              <span class="eyebrow">REQUEST SUBMITTED</span>
+
+              <h2>
+                Thank You for
+                <span>Contacting LEXORA.</span>
+              </h2>
+
+              <p>
+                Your demonstration request has been prepared.
+                This frontend-only version does not send the request
+                to a real server or confirm an appointment.
+              </p>
+
+
+              <div class="booking-confirmation-card">
+
+                <span>DEMO REQUEST REFERENCE</span>
+
+                <strong id="booking-reference">LEX-DEMO-000000</strong>
+
+                <button
+                  type="button"
+                  class="booking-copy-reference"
+                  id="booking-copy-reference"
+                  aria-label="Copy reference number"
+                >
+                  <i data-lucide="copy"></i>
+                  Copy
+                </button>
+
+              </div>
+
+
+              <p class="booking-success-note">
+                Please contact the firm directly to verify availability
+                and receive an actual appointment confirmation.
+              </p>
+
+
+              <div class="booking-success-actions">
+
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="booking-download-receipt"
+                >
+                  <i data-lucide="download"></i>
+                  Download Demo Receipt
+                </button>
+
+                <a href="index.html" class="btn btn-outline">
+                  Back to Home
+                  <i data-lucide="arrow-right"></i>
+                </a>
+
+              </div>
+
+            </section>
+
+          </div>
+
+
+          <!-- BOOKING SIDEBAR -->
+          <aside class="booking-sidebar">
+
+            <div class="booking-sidebar-card">
+
+              <span class="eyebrow">
+                <span class="eyebrow-line"></span>
+                YOUR CONSULTATION
+              </span>
+
+              <h3>A More Informed Next Step.</h3>
+
+              <p>
+                A structured conversation can help clarify your
+                requirements and identify possible next steps.
+              </p>
+
+              <div class="booking-sidebar-divider"></div>
+
+
+              <div class="booking-sidebar-feature">
+                <span class="sidebar-feature-icon">
+                  <i data-lucide="message-circle"></i>
+                </span>
+
+                <div>
+                  <strong>Understand Your Needs</strong>
+                  <span>Start with a focused conversation.</span>
+                </div>
+              </div>
+
+
+              <div class="booking-sidebar-feature">
+                <span class="sidebar-feature-icon">
+                  <i data-lucide="clipboard-list"></i>
+                </span>
+
+                <div>
+                  <strong>Review Your Options</strong>
+                  <span>Discuss the relevant considerations.</span>
+                </div>
+              </div>
+
+
+              <div class="booking-sidebar-feature">
+                <span class="sidebar-feature-icon">
+                  <i data-lucide="compass"></i>
+                </span>
+
+                <div>
+                  <strong>Plan the Next Step</strong>
+                  <span>Explore a practical way forward.</span>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- CONTACT CARD -->
+            <div class="booking-sidebar-contact">
+
+              <div class="sidebar-contact-icon">
+                <i data-lucide="help-circle"></i>
+              </div>
+
+              <h3>Need Assistance?</h3>
+
+              <p>
+                Have a question about the booking process?
+                Contact our team.
+              </p>
+
+              <a href="contact.html" class="text-link">
+                Contact Us
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+
+              <a href="mailto:info@lexora.example" class="sidebar-email">
+                <i data-lucide="mail"></i>
+                info@lexora.example
+              </a>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+            <div class="booking-sidebar-disclaimer">
+              <i data-lucide="shield-check"></i>
+
+              <p>
+                Please note: Submitting a consultation request does
+                not establish a professional relationship or create
+                an appointment until formally accepted.
+              </p>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="section-padding home-cta booking-cta">
+      <div class="container">
+
+        <div class="cta-content">
+
+          <span class="eyebrow">
+            <span class="eyebrow-line"></span>
+            LEXORA LEGAL & ADVISORY
+            <span class="eyebrow-line"></span>
+          </span>
+
+          <h2>
+            Clear Thinking.
+            <span>Confident Decisions.</span>
+          </h2>
+
+          <p>
+            Learn more about our legal services and consulting
+            approach before starting your consultation.
+          </p>
+
+          <div class="cta-actions">
+
+            <a href="services.html" class="btn btn-primary">
+              Explore Legal Services
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+              Contact Us
+              <i data-lucide="arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
